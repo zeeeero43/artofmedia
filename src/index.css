@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Syne', sans-serif;
+
+  /* Brand Colors */
+  --color-brand: #00FF29;
+  --color-brand-glow: rgba(0, 255, 41, 0.2);
+  --color-brand-dim: #00CC21;
+
+  /* Neutral Colors */
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-100: #F5F5F5;
+  --color-neutral-200: #E5E5E5;
+  --color-neutral-300: #D4D4D4;
+  --color-neutral-400: #A3A3A3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #050505;
+}
+
+/* Custom Scrollbar - Minimalist Dark on Light */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00FF29;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #050505;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility for slanted clipping */
+.clip-path-slant {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+}
+
+/* Cookie Consent Banner - Neon Green Brand Styling */
+#cc-main {
+  --cc-font-family: 'Inter', sans-serif;
+  --cc-bg: #171717;
+  --cc-primary-color: #ffffff;
+  --cc-secondary-color: #a3a3a3;
+  --cc-btn-primary-bg: #00FF29;
+  --cc-btn-primary-color: #0a0a0a;
+  --cc-btn-primary-border-color: #00FF29;
+  --cc-btn-primary-hover-bg: #00CC21;
+  --cc-btn-primary-hover-color: #0a0a0a;
+  --cc-btn-primary-hover-border-color: #00CC21;
+  --cc-btn-secondary-bg: transparent;
+  --cc-btn-secondary-color: #ffffff;
+  --cc-btn-secondary-border-color: #404040;
+  --cc-btn-secondary-hover-bg: #262626;
+  --cc-btn-secondary-hover-color: #ffffff;
+  --cc-separator-border-color: #262626;
+  --cc-toggle-on-bg: #00FF29;
+  --cc-toggle-off-bg: #404040;
+  --cc-toggle-readonly-bg: #00CC21;
+  --cc-cookie-category-block-bg: #262626;
+  --cc-cookie-category-block-border: #404040;
+  --cc-overlay-bg: rgba(0, 0, 0, 0.7);
+  --cc-modal-border-radius: 0.5rem;
+  --cc-btn-border-radius: 0;
+}
+
+#cc-main .cm,
+#cc-main .pm {
+  border: 1px solid #262626;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 41, 0.1);
+}
+
+#cc-main .cm__btn,
+#cc-main .pm__btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+#cc-main .cm__btn--primary,
+#cc-main .pm__btn--primary {
+  box-shadow: 0 0 20px rgba(0, 255, 41, 0.3);
+}
+
+#cc-main .cm__btn--primary:hover,
+#cc-main .pm__btn--primary:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 41, 0.5);
+  transform: translateY(-1px);
+}
+
+#cc-main .cm__title,
+#cc-main .pm__title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+#cc-main a {
+  color: #00FF29;
+}
+
+#cc-main a:hover {
+  color: #00CC21;
+}
+
+#cc-main .pm__badge {
+  background: #00FF29;
+  color: #0a0a0a;
+  font-weight: 700;
+}

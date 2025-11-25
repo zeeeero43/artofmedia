@@ -1,0 +1,26 @@
+# robots.txt für artofmedia-marketing.de
+
+User-agent: *
+Allow: /
+
+# Wichtige Seiten
+Allow: /webdesign-ecommerce
+Allow: /ki-automatisierungen
+Allow: /beratung-strategie
+Allow: /print-folie
+Allow: /licht-leuchttechnik
+Allow: /google-marketing
+
+# Rechtliche Seiten (optional indexieren)
+Allow: /impressum
+Allow: /datenschutz
+
+# Sitemap
+Sitemap: https://artofmedia-marketing.de/sitemap.xml
+
+# Crawl-Delay (optional, falls Server-Last ein Problem ist)
+# Crawl-delay: 1
+
+# Block-Regeln (falls nötig)
+# Disallow: /admin/
+# Disallow: /api/
