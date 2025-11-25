@@ -442,7 +442,7 @@ export default function WebdesignPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
+            className="font-display font-black text-3xl sm:text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
           >
             DEINE WEBSITE<br />
             VERKAUFT NICHT?
@@ -491,7 +491,7 @@ export default function WebdesignPage() {
              <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">
                 Die Realität
              </span>
-             <h2 className="font-display font-black text-5xl md:text-7xl leading-[0.9]">
+             <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl leading-[0.9]">
                 WARUM DU GELD <span className="text-red-500">VERBRENNST.</span>
              </h2>
           </div>
@@ -566,7 +566,7 @@ export default function WebdesignPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Wettbewerbsvorteil</span>
-            <h2 className="font-display font-black text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-950 uppercase">
+            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-950 uppercase">
               WAS IST DER UNTERSCHIED?
             </h2>
           </div>
@@ -636,7 +636,7 @@ export default function WebdesignPage() {
                    <div className="flex items-center justify-center md:justify-start gap-2 text-brand font-bold uppercase tracking-widest text-xs mb-4">
                       <BarChart3 size={16} /> Messbares Ergebnis
                    </div>
-                   <h3 className="font-display font-black text-4xl md:text-5xl text-white leading-none mb-4">
+                   <h3 className="font-display font-black text-2xl sm:text-4xl md:text-5xl text-white leading-none mb-4">
                       300% <br/><span className="text-neutral-400 text-2xl md:text-3xl font-sans font-normal">Mehr Leads</span>
                    </h3>
                    <p className="text-neutral-400">Durchschnittliche Performance-Steigerung nach 3 Monaten.</p>
@@ -697,7 +697,7 @@ export default function WebdesignPage() {
                 <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">
                    Verkaufspsychologie
                 </span>
-                <h2 className="font-display font-black text-4xl md:text-5xl mb-8 leading-tight">
+                <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-8 leading-tight">
                    DESIGN, DAS<br/>VERKAUFT.
                 </h2>
                 <p className="text-lg text-neutral-600 leading-relaxed mb-8">
@@ -728,7 +728,7 @@ export default function WebdesignPage() {
       <section className="py-32 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-24">
-            <h2 className="font-display font-black text-5xl md:text-6xl mb-6">WÄHLE DEINEN FOKUS</h2>
+            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl mb-6">WÄHLE DEINEN FOKUS</h2>
             <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
                Wir verkaufen keine Stunden. Wir verkaufen Ergebnisse. 
                Wähle das Fundament für dein Wachstum.
@@ -803,7 +803,7 @@ export default function WebdesignPage() {
         <div className="container mx-auto max-w-7xl">
            <div className="mb-20 text-center">
               <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">Echte Ergebnisse</span>
-              <h2 className="font-display font-black text-5xl md:text-7xl text-white uppercase leading-[0.9]">
+              <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl text-white uppercase leading-[0.9]">
                  Websites, die<br/>performen.
               </h2>
            </div>
@@ -940,7 +940,7 @@ export default function WebdesignPage() {
        {/* 7. FAQ */}
        <section className="py-24 px-6 bg-white border-t border-neutral-200">
           <div className="container mx-auto max-w-4xl">
-             <h2 className="font-display font-black text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
+             <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
              <div className="space-y-0 border-t border-neutral-200">
                 <FaqItem q="Wie lange dauert es?" a="Unternehmens-Website: 2-3 Wochen. Online Shop: 4-6 Wochen. Du musst nichts technisches machen." />
                 <FaqItem q="Was ist, wenn mir das Design nicht gefällt?" a="Wir designen nicht nach unserem Geschmack, sondern nach dem, was bei deinen Kunden funktioniert. Wir zeigen dir vorher Entwürfe." />

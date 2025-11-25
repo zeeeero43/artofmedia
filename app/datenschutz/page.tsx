@@ -55,7 +55,7 @@ export default function DatenschutzPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-950">
+            <h1 className="font-display font-black text-3xl sm:text-5xl md:text-7xl leading-[0.9] mb-6 sm:mb-8 tracking-tighter text-neutral-950">
               DATENSCHUTZ
             </h1>
             <p className="text-xl text-neutral-500 max-w-2xl leading-relaxed">

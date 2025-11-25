@@ -108,7 +108,7 @@ const NotFoundPage = () => {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="relative mb-8"
           >
-            <h1 className="font-display font-black text-[8rem] md:text-[10rem] lg:text-[12rem] leading-[0.8] tracking-tighter">
+            <h1 className="font-display font-black text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[12rem] leading-[0.8] tracking-tighter">
               <span className="relative inline-block">
                 <span className="text-brand drop-shadow-[0_0_40px_rgba(0,255,41,0.6)]">
                   {glitchText}
@@ -164,7 +164,7 @@ const NotFoundPage = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-12"
           >
-            <h2 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-white">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 sm:mb-6 text-white">
               SEITE NICHT GEFUNDEN
             </h2>
             <div className="w-[1px] h-16 bg-brand mx-auto mb-6" />

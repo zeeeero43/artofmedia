@@ -19,7 +19,8 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       icon: Monitor,
       category: 'digital',
       cols: 1,
-      image: '/images/services/webdesign-ecommerce.webp',
+      image: '/images/services/webdesign-ecommerce-optimized.webp',
+      srcSet: '/images/services/webdesign-ecommerce-640w.webp 640w, /images/services/webdesign-ecommerce-1024w.webp 1024w, /images/services/webdesign-ecommerce-1920w.webp 1920w',
       href: '/webdesign-ecommerce'
     },
     {
@@ -29,7 +30,8 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       icon: Search,
       category: 'digital',
       cols: 1,
-      image: '/images/services/google-marketing.webp',
+      image: '/images/services/google-marketing-optimized.webp',
+      srcSet: '/images/services/google-marketing-640w.webp 640w, /images/services/google-marketing-1024w.webp 1024w, /images/services/google-marketing-1920w.webp 1920w',
       href: '/google-marketing'
     },
     {
@@ -39,7 +41,8 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       icon: Cpu,
       category: 'digital',
       cols: 1,
-      image: '/images/services/ki-automatisierungen.webp',
+      image: '/images/services/ki-automatisierungen-optimized.webp',
+      srcSet: '/images/services/ki-automatisierungen-640w.webp 640w, /images/services/ki-automatisierungen-1024w.webp 1024w, /images/services/ki-automatisierungen-1920w.webp 1920w',
       href: '/ki-automatisierungen'
     },
     {
@@ -49,7 +52,8 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       icon: Lightbulb,
       category: 'digital',
       cols: 1,
-      image: '/images/services/beratung-strategie.webp',
+      image: '/images/services/beratung-strategie-optimized.webp',
+      srcSet: '/images/services/beratung-strategie-640w.webp 640w, /images/services/beratung-strategie-1024w.webp 1024w, /images/services/beratung-strategie-1920w.webp 1920w',
       href: '/beratung-strategie'
     }
   ],
@@ -61,7 +65,8 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       icon: Printer,
       category: 'physical',
       cols: 2,
-      image: '/images/services/print-folie.webp',
+      image: '/images/services/print-folie-optimized.webp',
+      srcSet: '/images/services/print-folie-640w.webp 640w, /images/services/print-folie-1024w.webp 1024w, /images/services/print-folie-1920w.webp 1920w',
       href: '/print-folie'
     },
     {
@@ -71,7 +76,8 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       icon: Zap,
       category: 'physical',
       cols: 2,
-      image: '/images/services/licht-leuchttechnik.webp',
+      image: '/images/services/licht-leuchttechnik-optimized.webp',
+      srcSet: '/images/services/licht-leuchttechnik-640w.webp 640w, /images/services/licht-leuchttechnik-1024w.webp 1024w, /images/services/licht-leuchttechnik-1920w.webp 1920w',
       href: '/licht-leuchttechnik'
     }
   ]
@@ -87,7 +93,7 @@ export const ServiceBento: React.FC<ServiceBentoProps> = ({ activeMode }) => {
       <div className="container mx-auto max-w-6xl">
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 auto-rows-[420px] gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 auto-rows-[320px] sm:auto-rows-[380px] md:auto-rows-[420px] gap-4 sm:gap-6"
         >
           <AnimatePresence mode="popLayout">
             {serviceData[activeMode].map((item) => (
@@ -127,10 +133,13 @@ const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src={item.image}
+          srcSet={item.srcSet}
+          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
           alt={`${item.title} - Professional service showcasing modern ${item.category === 'digital' ? 'digital solutions' : 'physical branding'}`}
           width="1920"
           height="1080"
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40 grayscale group-hover:grayscale-0"
         />
         {/* Overlay */}
@@ -138,12 +147,12 @@ const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
       </div>
 
       {/* Content */}
-      <div className="absolute bottom-0 left-0 w-full p-10 z-10 flex flex-col items-start">
+      <div className="absolute bottom-0 left-0 w-full p-6 sm:p-8 md:p-10 z-10 flex flex-col items-start">
         <div className="mb-6 text-brand opacity-80 group-hover:opacity-100 transition-opacity">
            <item.icon className="w-10 h-10" strokeWidth={1} />
         </div>
 
-        <h3 className="font-display font-bold text-3xl md:text-4xl text-white mb-4 group-hover:text-brand transition-colors duration-300">
+        <h3 className="font-display font-bold text-xl sm:text-3xl md:text-4xl text-white mb-3 sm:mb-4 group-hover:text-brand transition-colors duration-300">
           {item.title}
         </h3>
         

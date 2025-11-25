@@ -102,7 +102,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ activeMode }) =>
            <span className="text-brand font-mono text-sm uppercase tracking-widest mb-6 block">
              Workflow: {activeMode}
            </span>
-           <h2 className="font-display font-black text-5xl md:text-7xl text-neutral-950 uppercase">
+           <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl text-neutral-950 uppercase">
              Der Prozess
            </h2>
         </div>

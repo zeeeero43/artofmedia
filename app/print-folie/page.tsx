@@ -150,7 +150,7 @@ export default function PrintFoliePage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
+            className="font-display font-black text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
           >
             DEINE WERBUNG<br />
             IST UNSICHTBAR?
@@ -199,7 +199,7 @@ export default function PrintFoliePage() {
              <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">
                 Die Realität
              </span>
-             <h2 className="font-display font-black text-5xl md:text-7xl leading-[0.9]">
+             <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl leading-[0.9]">
                 WARUM DEINE WERBUNG <span className="text-red-500">VERSAGT.</span>
              </h2>
           </div>
@@ -309,7 +309,7 @@ export default function PrintFoliePage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Qualitätsunterschied</span>
-            <h2 className="font-display font-black text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-950 uppercase">
+            <h2 className="font-display font-black text-2xl sm:text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-950 uppercase">
               DER UNTERSCHIED?<br/>QUALITÄT.
             </h2>
           </div>
@@ -379,7 +379,7 @@ export default function PrintFoliePage() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Transformation</span>
-            <h2 className="font-display font-black text-4xl md:text-6xl mb-4">
+            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl mb-4">
               VON STANDARD<br/>ZU PREMIUM
             </h2>
             <p className="text-xl text-neutral-600">Sieh selbst, was mit professioneller Folierung möglich ist.</p>
@@ -394,7 +394,7 @@ export default function PrintFoliePage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Unser Angebot</span>
-            <h2 className="font-display font-black text-5xl md:text-7xl text-neutral-950 uppercase leading-[0.9]">
+            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl text-neutral-950 uppercase leading-[0.9]">
               DEINE WERBUNG,<br/>DEINE WAHL.
             </h2>
             <p className="text-xl text-neutral-500 mt-6 max-w-2xl mx-auto">
@@ -410,7 +410,7 @@ export default function PrintFoliePage() {
       <section className="py-32 px-6 bg-neutral-950 text-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
-            <h2 className="font-display font-black text-5xl md:text-6xl mb-6">
+            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl mb-6">
               WARUM ART.OF.MEDIA?
             </h2>
             <p className="text-xl text-neutral-400">Qualität hat einen Namen.</p>
@@ -456,7 +456,7 @@ export default function PrintFoliePage() {
       {/* 9. FAQ */}
       <section className="py-24 px-6 bg-white border-t border-neutral-200">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="font-display font-black text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
+          <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
           <div className="space-y-0 border-t border-neutral-200">
             <FaqItem
               q="Wie lange hält das?"

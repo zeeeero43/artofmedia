@@ -10,7 +10,7 @@ export const TrustBar: React.FC = () => {
   return (
     <section className="py-12 border-b border-neutral-100 bg-white overflow-hidden">
       <div className="container mx-auto px-6 mb-6 text-center">
-        <p className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+        <p className="text-sm font-mono uppercase tracking-widest text-neutral-600">
           Vertrauen von Marktführern
         </p>
       </div>

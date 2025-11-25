@@ -9,9 +9,10 @@ export interface ServiceItem {
   description: string;
   icon: LucideIcon;
   category: ServiceCategory;
-  cols: 1 | 2; 
+  cols: 1 | 2;
   image: string;
-  href?: string; // New optional property for links
+  srcSet?: string;
+  href?: string;
 }
 
 export interface ProcessStep {

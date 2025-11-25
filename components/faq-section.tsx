@@ -41,7 +41,7 @@ export const FAQSection: React.FC = () => {
            <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">
              Support
            </span>
-           <h2 className="font-display font-black text-5xl md:text-7xl uppercase text-neutral-950 tracking-tighter leading-[0.9]">
+           <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl uppercase text-neutral-950 tracking-tighter leading-[0.9]">
              Häufige Fragen
            </h2>
         </div>

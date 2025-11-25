@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { HeroSection } from './components/hero-section';
 import { ServiceBento } from './components/service-bento';
@@ -15,22 +15,31 @@ import { ServiceCategory } from './types';
 import { MessageSquare } from 'lucide-react';
 import { Preloader } from './components/preloader';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
-import WebdesignEcommercePage from './app/webdesign-ecommerce/page';
-import KIAutomatisierungenPage from './app/ki-automatisierungen/page';
-import BeratungStrategiePage from './app/beratung-strategie/page';
-import PrintFoliePage from './app/print-folie/page';
-import LichtLeuchttechnikPage from './app/licht-leuchttechnik/page';
-import GoogleMarketingPage from './app/google-marketing/page';
-import NotFoundPage from './app/404/page';
-import ImpressumPage from './app/impressum/page';
-import DatenschutzPage from './app/datenschutz/page';
-import MarketingAgenturDuisburgPage from './app/marketing-agentur-duisburg/page';
 import { Navigation } from './components/navigation';
 import { Footer } from './components/footer';
 import { ContactModal } from './components/contact-modal';
 import { Topbar } from './components/topbar';
 import { CookieConsentBanner } from './components/cookie-consent';
 import { SEOHead, createLocalBusinessSchema, createWebsiteSchema } from './components/seo-head';
+
+// Lazy-loaded page components for code-splitting
+const WebdesignEcommercePage = lazy(() => import('./app/webdesign-ecommerce/page'));
+const KIAutomatisierungenPage = lazy(() => import('./app/ki-automatisierungen/page'));
+const BeratungStrategiePage = lazy(() => import('./app/beratung-strategie/page'));
+const PrintFoliePage = lazy(() => import('./app/print-folie/page'));
+const LichtLeuchttechnikPage = lazy(() => import('./app/licht-leuchttechnik/page'));
+const GoogleMarketingPage = lazy(() => import('./app/google-marketing/page'));
+const NotFoundPage = lazy(() => import('./app/404/page'));
+const ImpressumPage = lazy(() => import('./app/impressum/page'));
+const DatenschutzPage = lazy(() => import('./app/datenschutz/page'));
+const MarketingAgenturDuisburgPage = lazy(() => import('./app/marketing-agentur-duisburg/page'));
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="w-8 h-8 border-2 border-brand border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 function App() {
   // Global State
@@ -124,7 +133,7 @@ function App() {
           {/* 3. Intro Statement (Editorial Style) */}
           <section className="relative z-10 py-24 md:py-32 px-6 bg-white border-b border-neutral-200">
              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="font-display font-bold text-4xl md:text-6xl leading-tight mb-8">
+                <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl leading-tight mb-6 sm:mb-8">
                   "Unsichtbar sein<br/>kostet Geld."
                 </h2>
                 <div className="w-[1px] h-16 bg-brand mx-auto mb-8" />
@@ -139,7 +148,7 @@ function App() {
           <section className="relative z-10 py-16 px-6 bg-neutral-50 border-b border-neutral-200">
              <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-8">
-                   <h3 className="font-display font-bold text-2xl md:text-3xl text-neutral-950 mb-4">
+                   <h3 className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-neutral-950 mb-4">
                       Unsere Leistungen
                    </h3>
                    <p className="text-neutral-600 text-base md:text-lg">
@@ -200,9 +209,9 @@ function App() {
                 exit={{ scale: 0, rotate: -180 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="fixed bottom-8 right-8 z-40 w-16 h-16 bg-brand text-neutral-950 rounded-full shadow-[0_0_20px_rgba(0,255,41,0.4)] flex items-center justify-center cursor-pointer"
+                className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-40 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-brand text-neutral-950 rounded-full shadow-[0_0_20px_rgba(0,255,41,0.4)] flex items-center justify-center cursor-pointer"
               >
-                <MessageSquare size={28} strokeWidth={2.5} />
+                <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" strokeWidth={2.5} />
               </motion.button>
             )}
           </AnimatePresence>
@@ -217,19 +226,21 @@ function App() {
   return (
     <>
       <CookieConsentBanner />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/webdesign-ecommerce" element={<WebdesignEcommercePage />} />
-        <Route path="/ki-automatisierungen" element={<KIAutomatisierungenPage />} />
-        <Route path="/beratung-strategie" element={<BeratungStrategiePage />} />
-        <Route path="/print-folie" element={<PrintFoliePage />} />
-        <Route path="/licht-leuchttechnik" element={<LichtLeuchttechnikPage />} />
-        <Route path="/google-marketing" element={<GoogleMarketingPage />} />
-        <Route path="/impressum" element={<ImpressumPage />} />
-        <Route path="/datenschutz" element={<DatenschutzPage />} />
-        <Route path="/marketing-agentur-duisburg" element={<MarketingAgenturDuisburgPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/webdesign-ecommerce" element={<WebdesignEcommercePage />} />
+          <Route path="/ki-automatisierungen" element={<KIAutomatisierungenPage />} />
+          <Route path="/beratung-strategie" element={<BeratungStrategiePage />} />
+          <Route path="/print-folie" element={<PrintFoliePage />} />
+          <Route path="/licht-leuchttechnik" element={<LichtLeuchttechnikPage />} />
+          <Route path="/google-marketing" element={<GoogleMarketingPage />} />
+          <Route path="/impressum" element={<ImpressumPage />} />
+          <Route path="/datenschutz" element={<DatenschutzPage />} />
+          <Route path="/marketing-agentur-duisburg" element={<MarketingAgenturDuisburgPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

@@ -129,7 +129,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
             >
               <div
                 className={cn(
-                  "relative font-display font-black text-6xl md:text-7xl transition-all duration-500 text-center tabular-nums",
+                  "relative font-display font-black text-4xl sm:text-6xl md:text-7xl transition-all duration-500 text-center tabular-nums",
                   isExpanded ? "text-brand" : "text-neutral-200",
                   isHovered && !isExpanded && "text-neutral-300"
                 )}
@@ -218,7 +218,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
                   initial={{ x: -50, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="relative h-[400px] rounded-sm overflow-hidden group"
+                  className="relative h-[280px] sm:h-[340px] md:h-[400px] rounded-sm overflow-hidden group"
                 >
                   {/* Image */}
                   <motion.img
@@ -345,7 +345,7 @@ export const DeepDiveGrid: React.FC<DeepDiveGridProps> = ({ onContactClick }) =>
           <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">
             Dein Vorteil
           </span>
-          <h2 className="font-display font-black text-4xl md:text-5xl uppercase text-neutral-950 leading-[0.9]">
+          <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl uppercase text-neutral-950 leading-[0.9]">
             Warum wir?
           </h2>
           <motion.p

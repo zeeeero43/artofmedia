@@ -74,7 +74,7 @@ export const Testimonials: React.FC = () => {
                 <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">
                     Success Stories
                 </span>
-                <h2 className="font-display font-black text-4xl md:text-6xl uppercase text-neutral-950 leading-[0.9]">
+                <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl uppercase text-neutral-950 leading-[0.9]">
                     Kunden lieben<br/>Ergebnisse
                 </h2>
             </div>
@@ -90,7 +90,7 @@ export const Testimonials: React.FC = () => {
                     key={review.id}
                     layoutId={`card-${review.id}`}
                     onClick={() => setSelectedId(review.id)}
-                    className="group cursor-pointer relative h-[450px] rounded-sm overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+                    className="group cursor-pointer relative h-[380px] sm:h-[420px] md:h-[450px] rounded-sm overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
                 >
                     {/* Background Image */}
                     <img

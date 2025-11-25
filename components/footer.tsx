@@ -16,12 +16,12 @@ export const Footer: React.FC<FooterProps> = ({ showMainCta = true, onContactCli
         
         {showMainCta && (
           <div className="flex flex-col items-center text-center mb-24 max-w-4xl mx-auto">
-            <h2 className="font-display font-black text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] mb-8 uppercase">
+            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] mb-6 sm:mb-8 uppercase">
               GENUG<br/>THEORIE.<br/>
               <span className="text-brand">LASS UNS<br/>STARTEN.</span>
             </h2>
             
-            <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
+            <p className="text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
               Du bekommst kein Verkaufsgespräch. Du bekommst eine Beratung, in der wir deine aktuelle Situation analysieren und Möglichkeiten zeigen.
             </p>
 
@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ showMainCta = true, onContactCli
               <span>KOSTENLOSES GESPRÄCH BUCHEN</span>
             </button>
 
-            <div className="mt-8 text-neutral-500 text-[10px] md:text-xs font-mono uppercase tracking-[0.2em]">
+            <div className="mt-8 text-neutral-300 text-xs md:text-sm font-mono uppercase tracking-[0.2em]">
                 DAUER: 30 MIN • 100% MEHRWERT • 0% DRUCK
             </div>
           </div>
@@ -41,13 +41,13 @@ export const Footer: React.FC<FooterProps> = ({ showMainCta = true, onContactCli
         <div className={cn("grid grid-cols-1 md:grid-cols-4 gap-12", showMainCta ? "border-t border-neutral-800 pt-12" : "")}>
           <div className="col-span-1 md:col-span-2">
              <span className="font-display font-bold text-2xl block mb-6">art.of.media</span>
-             <p className="text-neutral-500 max-w-sm">
+             <p className="text-neutral-300 max-w-sm">
                Agentur für digitale Dominanz und physische Markenarchitektur.
              </p>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-6">Kontakt</h4>
-            <ul className="space-y-4 text-neutral-400">
+            <h3 className="font-bold text-white mb-6">Kontakt</h3>
+            <ul className="space-y-4 text-neutral-300">
               <li>
                 <a href="mailto:info@artofmedia-marketing.de" className="hover:text-brand transition-colors">
                   info@artofmedia-marketing.de
@@ -62,15 +62,15 @@ export const Footer: React.FC<FooterProps> = ({ showMainCta = true, onContactCli
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-6">Rechtliches</h4>
-            <ul className="space-y-4 text-neutral-400">
+            <h3 className="font-bold text-white mb-6">Rechtliches</h3>
+            <ul className="space-y-4 text-neutral-300">
               <li><Link to="/impressum" className="hover:text-brand transition-colors">Impressum</Link></li>
               <li><Link to="/datenschutz" className="hover:text-brand transition-colors">Datenschutz</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-20 text-center md:text-left text-neutral-600 text-xs font-mono uppercase tracking-widest">
+        <div className="mt-20 text-center md:text-left text-neutral-400 text-xs font-mono uppercase tracking-widest">
           &copy; 2025 art.of.media marketing. Alle Rechte vorbehalten.
         </div>
       </div>
