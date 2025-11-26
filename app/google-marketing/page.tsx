@@ -1192,7 +1192,7 @@ export default function GoogleMarketingPage() {
 
            </div>
         </div>
-      </section>
+      </section>}
 
        {/* 9. FAQ */}
        <section className="py-24 px-6 bg-white border-t border-neutral-200">
