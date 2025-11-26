@@ -124,10 +124,10 @@ export default function LichtLeuchttechnikPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
+            className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
           >
-            DEINE WERBUNG<br />
-            IST NACHTS UNSICHTBAR?
+            DEINE <span className="text-brand">WERBUNG</span><br />
+            IST NACHTS <span className="text-brand">UNSICHTBAR</span>?
           </motion.h1>
 
           <motion.p

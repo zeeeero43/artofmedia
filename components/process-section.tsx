@@ -1,6 +1,6 @@
 
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ServiceCategory, ProcessStep } from '../types';
 import { cn } from '../lib/utils';
 import { LogoDesignVisualizer } from './animations/LogoDesignVisualizer';
@@ -118,11 +118,9 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ activeMode }) =>
           />
 
           <div className="relative z-20 space-y-24 md:space-y-32">
-            <AnimatePresence mode="wait">
-              {processData[activeMode].map((step, index) => (
-                <ProcessItem key={step.id} step={step} index={index} activeMode={activeMode} />
-              ))}
-            </AnimatePresence>
+            {processData[activeMode].map((step, index) => (
+              <ProcessItem key={step.id} step={step} index={index} activeMode={activeMode} />
+            ))}
           </div>
         </div>
       </div>
@@ -149,7 +147,7 @@ const ProcessItem: React.FC<{ step: ProcessStep; index: number, activeMode: stri
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className={cn(
-        "flex flex-col md:flex-row items-start md:items-center w-full pl-12 md:pl-0",
+        "relative flex flex-col md:flex-row items-start md:items-center w-full pl-12 md:pl-0",
         isEven ? "md:flex-row-reverse" : ""
       )}
     >

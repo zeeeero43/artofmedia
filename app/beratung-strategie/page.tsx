@@ -404,10 +404,10 @@ export default function BeratungStrategie() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black text-3xl sm:text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
+            className="font-display font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
           >
             WO ANFANGEN<br />
-            MIT MARKETING?
+            MIT <span className="text-brand">MARKETING</span>?
           </motion.h1>
 
           <motion.p

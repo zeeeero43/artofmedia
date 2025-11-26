@@ -17,6 +17,7 @@ export default {
           DEFAULT: '#00FF29',
           glow: 'rgba(0, 255, 41, 0.2)',
           dim: '#00CC21',
+          dark: '#00D922',
         },
         neutral: {
           50: '#FAFAFA',

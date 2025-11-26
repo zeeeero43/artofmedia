@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const logos = [
-  "TechIndustries", "GlobalSolutions", "FutureBuild", "AlphaCons", "CreativeLabs", "NordicDesign"
+  "Friseurstudio Erkol", "S.A Connect", "BLT-Speditionen", "Fahrschule Elly", "Creativa-Dienstleistungen"
 ];
 
 export const TrustBar: React.FC = () => {
@@ -11,7 +11,7 @@ export const TrustBar: React.FC = () => {
     <section className="py-12 border-b border-neutral-100 bg-white overflow-hidden">
       <div className="container mx-auto px-6 mb-6 text-center">
         <p className="text-sm font-mono uppercase tracking-widest text-neutral-600">
-          Vertrauen von Marktführern
+          Unsere Kunden
         </p>
       </div>
       
