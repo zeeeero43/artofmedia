@@ -37,9 +37,9 @@ export const IntroGate: React.FC<IntroGateProps> = ({ onChoose }) => {
         <span className="font-mono text-xs uppercase tracking-[0.3em] mb-4">
           Wählen Sie Ihren Bereich
         </span>
-        <h1 className="font-display font-black text-2xl md:text-4xl uppercase tracking-tight text-center px-4">
+        <h2 className="font-display font-black text-2xl md:text-4xl uppercase tracking-tight text-center px-4">
           Wie können wir Ihnen helfen?
-        </h1>
+        </h2>
       </motion.div>
 
       {/* DIGITAL SIDE (LEFT) */}

@@ -61,7 +61,7 @@ export const CookieConsentBanner = () => {
               acceptAllBtn: 'Alle akzeptieren',
               acceptNecessaryBtn: 'Nur notwendige',
               showPreferencesBtn: 'Einstellungen verwalten',
-              footer: '<a href="/impressum">Impressum</a> | <a href="/datenschutz">Datenschutz</a>'
+              footer: '<a href="/impressum">Impressum</a>  |  <a href="/datenschutz">Datenschutz</a>'
             },
             preferencesModal: {
               title: 'Cookie-Einstellungen',

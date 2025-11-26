@@ -19,6 +19,18 @@ interface FormData {
 }
 
 export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, selectedInterest }) => {
+  // Body scroll lock when modal is open
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const [formData, setFormData] = useState<FormData>({
     name: '',
     company: '',

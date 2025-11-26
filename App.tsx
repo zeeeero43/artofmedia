@@ -8,7 +8,7 @@ import { ProcessSection } from './components/process-section';
 import { TrustSection } from './components/content-sections';
 import { TrustBar } from './components/trust-bar';
 import { DeepDiveGrid } from './components/detail-accordion';
-import { Testimonials } from './components/testimonials';
+import { Testimonials, TestimonialModal } from './components/testimonials';
 import { FAQSection } from './components/faq-section';
 import { ComparisonSection } from './components/comparison-section';
 import { ServiceCategory } from './types';
@@ -48,6 +48,7 @@ function App() {
   const [mode, setMode] = useState<ServiceCategory>('digital');
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [selectedTestimonialId, setSelectedTestimonialId] = useState<number | null>(null);
 
   const { scrollY } = useScroll();
   
@@ -95,10 +96,10 @@ function App() {
       <main className="relative w-full min-h-screen bg-white text-neutral-950 font-sans selection:bg-brand selection:text-black">
         {/* SEO Meta Tags */}
         <SEOHead
-          title="Marketing Agentur Duisburg | Webdesign & Werbetechnik"
-          description="Marketing-Agentur in Duisburg für Webdesign, E-Commerce, KI-Automatisierung und Werbetechnik. Digital und Physisch. Strategie und Umsetzung, die messbar Umsatz bringt."
+          title="Marketing Agentur Duisburg | art.of.media"
+          description="Marketing-Agentur Duisburg: Webdesign, E-Commerce, KI-Automatisierung & Werbetechnik. Digital und physisch. Messbar mehr Umsatz."
           canonical="https://artofmedia-marketing.de"
-          keywords="Marketing Agentur Duisburg, Webdesign Duisburg, Werbetechnik Duisburg, KI Automatisierung, E-Commerce, Fahrzeugbeschriftung, LED Lichttechnik"
+          keywords="Marketing Agentur Duisburg, Webdesign Duisburg, Werbetechnik Duisburg, KI Automatisierung, E-Commerce, Fahrzeugbeschriftung, LED Lichttechnik, Ruhrgebiet"
           structuredData={structuredData}
         />
 
@@ -133,7 +134,7 @@ function App() {
           {/* 3. Intro Statement (Editorial Style) */}
           <section className="relative z-10 py-24 md:py-32 px-6 bg-white border-b border-neutral-200">
              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl leading-tight mb-6 sm:mb-8">
+                <h2 className="font-display font-bold text-xl sm:text-4xl md:text-6xl leading-tight mb-6 sm:mb-8">
                   "Unsichtbar sein<br/>kostet Geld."
                 </h2>
                 <div className="w-[1px] h-16 bg-brand mx-auto mb-8" />
@@ -188,7 +189,7 @@ function App() {
 
           {/* 10. VISUAL TESTIMONIALS */}
           <div className="relative z-10 bg-white border-t border-neutral-200">
-            <Testimonials />
+            <Testimonials onSelectReview={setSelectedTestimonialId} />
           </div>
 
           {/* 11. MASSIVE FAQ */}
@@ -196,7 +197,48 @@ function App() {
             <FAQSection />
           </div>
 
-          {/* 12. Inverted Impact Footer */}
+          {/* 12. Local SEO Section - Marketing Agentur aus Duisburg */}
+          <section className="relative z-10 py-16 md:py-20 px-6 bg-neutral-50 border-t border-neutral-200">
+             <div className="max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                   <div>
+                      <span className="font-mono text-xs uppercase tracking-widest text-brand mb-4 block">Ihr Partner im Ruhrgebiet</span>
+                      <h2 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl leading-tight mb-6">
+                        Marketing Agentur aus Duisburg
+                      </h2>
+                      <p className="text-neutral-600 leading-relaxed mb-4">
+                        Als Marketing Agentur aus Duisburg verstehen wir die Bedürfnisse lokaler Unternehmen im Ruhrgebiet. Von professionellem Webdesign über E-Commerce-Lösungen bis hin zur hochwertigen Fahrzeugfolierung – wir bieten alles aus einer Hand.
+                      </p>
+                      <p className="text-neutral-600 leading-relaxed mb-4">
+                        Unsere Kunden aus Duisburg, Düsseldorf, Essen, Mülheim und dem gesamten Ruhrgebiet vertrauen auf unsere Expertise in digitalem Marketing und physischer Werbetechnik. Ob Sie eine neue Website benötigen, Ihre Google-Sichtbarkeit verbessern möchten oder eine auffällige Fahrzeugbeschriftung suchen – wir sind Ihr Ansprechpartner in NRW.
+                      </p>
+                      <p className="text-neutral-600 leading-relaxed">
+                        Mit über 15 Jahren Erfahrung und mehr als 100 erfolgreich umgesetzten Projekten wissen wir, was lokale Unternehmen brauchen, um in der digitalen und physischen Welt sichtbar zu werden und nachhaltig zu wachsen.
+                      </p>
+                   </div>
+                   <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white p-6 rounded-lg border border-neutral-200">
+                         <div className="font-display font-bold text-3xl text-brand mb-2">15+</div>
+                         <div className="text-sm text-neutral-600">Jahre Erfahrung</div>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg border border-neutral-200">
+                         <div className="font-display font-bold text-3xl text-brand mb-2">100+</div>
+                         <div className="text-sm text-neutral-600">Projekte</div>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg border border-neutral-200">
+                         <div className="font-display font-bold text-3xl text-brand mb-2">NRW</div>
+                         <div className="text-sm text-neutral-600">Servicegebiet</div>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg border border-neutral-200">
+                         <div className="font-display font-bold text-3xl text-brand mb-2">100%</div>
+                         <div className="text-sm text-neutral-600">Kundenfokus</div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </section>
+
+          {/* 13. Inverted Impact Footer */}
           <Footer onContactClick={() => setIsContactOpen(true)} />
 
           {/* Floating Conversion Button */}
@@ -218,6 +260,9 @@ function App() {
 
           {/* Global Contact Modal */}
           <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+
+          {/* Global Testimonial Modal */}
+          <TestimonialModal selectedId={selectedTestimonialId} onClose={() => setSelectedTestimonialId(null)} />
       </div>
     </main>
     );

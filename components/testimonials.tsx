@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Star, ArrowRight, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface Review {
+export interface Review {
   id: number;
   text: string;
   author: string;
@@ -15,7 +15,7 @@ interface Review {
   detailText: string;
 }
 
-const reviews: Review[] = [
+export const reviews: Review[] = [
   {
     id: 1,
     text: "Der Umsatz hat sich verdoppelt! Wahnsinn, was Branding ausmacht.",
@@ -51,20 +51,11 @@ const reviews: Review[] = [
   }
 ];
 
-export const Testimonials: React.FC = () => {
-  const [selectedId, setSelectedId] = useState<number | null>(null);
+interface TestimonialsProps {
+  onSelectReview: (id: number) => void;
+}
 
-  // Body scroll lock when modal is open
-  useEffect(() => {
-    if (selectedId) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [selectedId]);
+export const Testimonials: React.FC<TestimonialsProps> = ({ onSelectReview }) => {
 
   return (
     <section className="py-32 w-full bg-white border-t border-neutral-200">
@@ -89,7 +80,7 @@ export const Testimonials: React.FC = () => {
                 <motion.div 
                     key={review.id}
                     layoutId={`card-${review.id}`}
-                    onClick={() => setSelectedId(review.id)}
+                    onClick={() => onSelectReview(review.id)}
                     className="group cursor-pointer relative h-[380px] sm:h-[420px] md:h-[450px] rounded-sm overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
                 >
                     {/* Background Image */}
@@ -146,103 +137,124 @@ export const Testimonials: React.FC = () => {
             ))}
         </div>
 
-        {/* Expanded Modal */}
-        <AnimatePresence>
-            {selectedId && (
-                <div className="fixed inset-0 z-[9998] flex items-center justify-center p-4 md:p-8">
-                    <motion.div 
-                        initial={{ opacity: 0 }} 
-                        animate={{ opacity: 1 }} 
-                        exit={{ opacity: 0 }}
-                        onClick={() => setSelectedId(null)}
-                        className="absolute inset-0 bg-neutral-950/90 backdrop-blur-sm"
-                    />
-                    
-                    {reviews.map(review => review.id === selectedId && (
-                        <motion.div 
-                            layoutId={`card-${review.id}`}
-                            key={review.id}
-                            className="relative w-full max-w-6xl bg-white rounded-lg overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[90vh] overflow-y-auto lg:overflow-hidden"
-                        >
-                             <button 
-                                onClick={(e) => { e.stopPropagation(); setSelectedId(null); }}
-                                className="absolute top-6 right-6 z-50 bg-white rounded-full p-2 text-neutral-950 hover:bg-brand transition-colors shadow-lg"
-                             >
-                                <X size={24} />
-                             </button>
-
-                             {/* Image Side */}
-                             <div className="w-full lg:w-5/12 h-64 lg:h-auto relative group">
-                                <img
-                                  src={review.image}
-                                  alt={`${review.company} project - Detailed view of successful implementation`}
-                                  width="1920"
-                                  height="1080"
-                                  loading="eager"
-                                  className="absolute inset-0 w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-neutral-950/20" />
-                                <div className="absolute bottom-8 left-8 right-8 text-white">
-                                    <span className="inline-block bg-brand text-neutral-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
-                                      Case Study
-                                    </span>
-                                    <h3 className="font-display font-bold text-4xl mb-2">{review.company}</h3>
-                                    <div className="flex gap-4 mt-4">
-                                        <span className="flex items-center gap-2 text-sm bg-neutral-950/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
-                                            <Globe size={14} className="text-brand" /> Website & Branding
-                                        </span>
-                                    </div>
-                                </div>
-                             </div>
-
-                             {/* Content Side */}
-                             <div className="w-full lg:w-7/12 p-8 md:p-16 bg-white flex flex-col justify-center relative">
-                                <div className="max-w-2xl">
-                                    <div className="flex gap-1 text-brand mb-8">
-                                        {[1,2,3,4,5].map(i => <Star key={i} fill="currentColor" size={20} />)}
-                                    </div>
-                                    
-                                    <h4 className="font-display font-bold text-3xl md:text-4xl mb-8 leading-tight text-neutral-950">
-                                        "{review.text}"
-                                    </h4>
-                                    
-                                    <p className="text-lg text-neutral-600 leading-relaxed mb-12">
-                                        {review.detailText}
-                                    </p>
-
-                                    {/* Key Stats Grid */}
-                                    <div className="grid grid-cols-2 gap-4 md:gap-8 mb-12">
-                                        {review.stats.map((stat, idx) => (
-                                            <div key={idx} className="bg-neutral-50 p-6 rounded-lg border border-neutral-100">
-                                                <div className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">{stat.label}</div>
-                                                <div className="text-3xl md:text-4xl font-display font-bold text-brand">{stat.value}</div>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    <div className="flex items-center gap-4 pt-8 border-t border-neutral-100">
-                                        <img
-                                          src={review.avatar}
-                                          alt={`${review.author} - ${review.role} at ${review.company}`}
-                                          width="56"
-                                          height="56"
-                                          loading="eager"
-                                          className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-lg"
-                                        />
-                                        <div>
-                                            <div className="font-bold text-neutral-950 text-lg">{review.author}</div>
-                                            <div className="text-sm text-neutral-500 uppercase tracking-wider font-medium">{review.role}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                             </div>
-                        </motion.div>
-                    ))}
-                </div>
-            )}
-        </AnimatePresence>
-
       </div>
     </section>
+  );
+};
+
+// Separate Modal Component to be rendered at App level
+interface TestimonialModalProps {
+  selectedId: number | null;
+  onClose: () => void;
+}
+
+export const TestimonialModal: React.FC<TestimonialModalProps> = ({ selectedId, onClose }) => {
+  // Body scroll lock when modal is open
+  React.useEffect(() => {
+    if (selectedId) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedId]);
+
+  return (
+    <AnimatePresence>
+      {selectedId && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="absolute inset-0 bg-neutral-950/90 backdrop-blur-sm"
+          />
+
+          {reviews.map(review => review.id === selectedId && (
+            <motion.div
+              layoutId={`card-${review.id}`}
+              key={review.id}
+              className="relative w-full max-w-6xl bg-white rounded-lg overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[90vh] overflow-y-auto lg:overflow-hidden"
+            >
+              <button
+                onClick={(e) => { e.stopPropagation(); onClose(); }}
+                className="absolute top-6 right-6 z-50 bg-white rounded-full p-2 text-neutral-950 hover:bg-brand transition-colors shadow-lg"
+              >
+                <X size={24} />
+              </button>
+
+              {/* Image Side */}
+              <div className="w-full lg:w-5/12 h-64 lg:h-auto relative group">
+                <img
+                  src={review.image}
+                  alt={`${review.company} project - Detailed view of successful implementation`}
+                  width="1920"
+                  height="1080"
+                  loading="eager"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-neutral-950/20" />
+                <div className="absolute bottom-8 left-8 right-8 text-white">
+                  <span className="inline-block bg-brand text-neutral-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
+                    Case Study
+                  </span>
+                  <h3 className="font-display font-bold text-4xl mb-2">{review.company}</h3>
+                  <div className="flex gap-4 mt-4">
+                    <span className="flex items-center gap-2 text-sm bg-neutral-950/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+                      <Globe size={14} className="text-brand" /> Website & Branding
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Side */}
+              <div className="w-full lg:w-7/12 p-8 md:p-16 bg-white flex flex-col justify-center relative">
+                <div className="max-w-2xl">
+                  <div className="flex gap-1 text-brand mb-8">
+                    {[1,2,3,4,5].map(i => <Star key={i} fill="currentColor" size={20} />)}
+                  </div>
+
+                  <h4 className="font-display font-bold text-3xl md:text-4xl mb-8 leading-tight text-neutral-950">
+                    "{review.text}"
+                  </h4>
+
+                  <p className="text-lg text-neutral-600 leading-relaxed mb-12">
+                    {review.detailText}
+                  </p>
+
+                  {/* Key Stats Grid */}
+                  <div className="grid grid-cols-2 gap-4 md:gap-8 mb-12">
+                    {review.stats.map((stat, idx) => (
+                      <div key={idx} className="bg-neutral-50 p-6 rounded-lg border border-neutral-100">
+                        <div className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">{stat.label}</div>
+                        <div className="text-3xl md:text-4xl font-display font-bold text-brand">{stat.value}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-4 pt-8 border-t border-neutral-100">
+                    <img
+                      src={review.avatar}
+                      alt={`${review.author} - ${review.role} at ${review.company}`}
+                      width="56"
+                      height="56"
+                      loading="eager"
+                      className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-lg"
+                    />
+                    <div>
+                      <div className="font-bold text-neutral-950 text-lg">{review.author}</div>
+                      <div className="text-sm text-neutral-500 uppercase tracking-wider font-medium">{review.role}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      )}
+    </AnimatePresence>
   );
 };

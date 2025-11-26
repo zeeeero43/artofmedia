@@ -21,7 +21,7 @@ const AnimatedCounter = ({ value }: { value: number }) => {
 export const TrustSection: React.FC = () => {
   const metrics = [
     { label: "Jahre Erfahrung", value: 15, suffix: "+" },
-    { label: "Projekte", value: 800, suffix: "+" },
+    { label: "Projekte", value: 100, suffix: "+" },
     { label: "Retention Rate", value: 98, suffix: "%" },
   ];
 
@@ -55,11 +55,11 @@ export const TrustSection: React.FC = () => {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-neutral-800 pb-8">
-           <h2 className="font-display font-bold text-4xl md:text-5xl">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-24 border-b border-neutral-800 pb-8">
+           <h2 className="font-display font-bold text-4xl md:text-5xl text-center md:text-left">
              Ergebnisse,<br/><span className="text-brand">die skalieren.</span>
            </h2>
-           <p className="text-neutral-400 max-w-md text-right mt-6 md:mt-0 font-mono text-sm">
+           <p className="text-neutral-400 max-w-md text-center md:text-right mt-6 md:mt-0 font-mono text-sm">
              Wir messen unseren Erfolg an Ihrem ROI.<br/>
              Daten lügen nicht.
            </p>

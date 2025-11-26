@@ -45,7 +45,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #0a0a0a;
   color: #050505;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -131,4 +131,17 @@ body {
   background: #00FF29;
   color: #0a0a0a;
   font-weight: 700;
+}
+
+/* Cookie Consent Footer Styling */
+#cc-main .cm__footer {
+  background: #171717;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+#cc-main .cm__footer a {
+  margin: 0 0.5rem;
 }
