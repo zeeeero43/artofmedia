@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowUpRight,
@@ -107,28 +107,10 @@ export const ServiceBento: React.FC<ServiceBentoProps> = ({ activeMode }) => {
 };
 
 const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
-  const Component = motion.div;
-  const navigate = useNavigate();
+  const MotionLink = motion.create(Link);
 
-  return (
-    <Component
-      layoutId={item.id}
-      onClick={(e) => {
-        if (item.href) {
-          e.preventDefault();
-          navigate(item.href);
-        }
-      }}
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
-      className={cn(
-        "group relative overflow-hidden bg-neutral-950 shadow-sm transition-all duration-500 hover:z-10 border-2 border-transparent hover:border-brand block",
-        item.cols === 2 ? "md:col-span-2" : "md:col-span-1",
-        item.href ? "cursor-pointer" : ""
-      )}
-    >
+  const cardContent = (
+    <>
       {/* Background Image with Zoom Effect */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
@@ -155,7 +137,7 @@ const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
         <h3 className="font-display font-bold text-xl sm:text-3xl md:text-4xl text-white mb-3 sm:mb-4 group-hover:text-brand transition-colors duration-300">
           {item.title}
         </h3>
-        
+
         <p className="text-neutral-400 text-sm md:text-base font-medium leading-relaxed max-w-[90%] group-hover:text-white transition-colors">
           {item.description}
         </p>
@@ -164,6 +146,42 @@ const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
           <ArrowUpRight size={20} />
         </div>
       </div>
-    </Component>
+    </>
+  );
+
+  if (item.href) {
+    return (
+      <MotionLink
+        to={item.href}
+        layoutId={item.id}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className={cn(
+          "group relative overflow-hidden bg-neutral-950 shadow-sm transition-all duration-500 hover:z-10 border-2 border-transparent hover:border-brand block",
+          item.cols === 2 ? "md:col-span-2" : "md:col-span-1",
+          "cursor-pointer"
+        )}
+      >
+        {cardContent}
+      </MotionLink>
+    );
+  }
+
+  return (
+    <motion.div
+      layoutId={item.id}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className={cn(
+        "group relative overflow-hidden bg-neutral-950 shadow-sm transition-all duration-500 hover:z-10 border-2 border-transparent hover:border-brand block",
+        item.cols === 2 ? "md:col-span-2" : "md:col-span-1"
+      )}
+    >
+      {cardContent}
+    </motion.div>
   );
 };

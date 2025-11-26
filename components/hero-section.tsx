@@ -44,6 +44,7 @@ export const HeroSection: React.FC = () => {
           <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 sm:mt-4 tracking-normal text-neutral-600">
             Duisburg
           </span>
+          <span className="sr-only"> - Webdesign, E-Commerce und Werbetechnik</span>
         </h1>
 
         {/* Subline */}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { ArrowLeft, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -55,12 +55,26 @@ export const Navigation: React.FC<NavigationProps> = ({ showBack = false, onNavi
     <>
       <nav className={`fixed ${shouldShowBack ? 'top-0' : 'top-12'} left-0 w-full z-50 px-4 sm:px-6 md:px-12 py-6 sm:py-8 flex justify-between items-center mix-blend-difference text-white pointer-events-none`}>
         {/* Logo */}
-        <div
+        <Link
+          to="/"
           className="font-display font-bold text-lg sm:text-xl tracking-tight pointer-events-auto cursor-pointer flex items-center gap-2 sm:gap-3"
-          onClick={() => handleNavigation('/')}
+          onClick={() => onNavigate?.('/')}
         >
           {shouldShowBack && <ArrowLeft size={18} className="text-white sm:w-5 sm:h-5" />}
           art.of.media
+        </Link>
+
+        {/* Desktop Navigation Links - Hidden but accessible for SEO */}
+        <div className="hidden md:flex items-center gap-6 pointer-events-auto">
+          {menuLinks.slice(0, 4).map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className="text-sm font-medium hover:text-brand transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
         {/* Hamburger Button - Mobile Only */}
@@ -120,20 +134,24 @@ export const Navigation: React.FC<NavigationProps> = ({ showBack = false, onNavi
                   </span>
                 </div>
                 {menuLinks.map((link, index) => (
-                  <motion.button
+                  <motion.div
                     key={link.path}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + index * 0.05 }}
-                    onClick={() => handleNavigation(link.path)}
-                    className={`w-full text-left px-6 py-4 text-lg font-medium transition-colors ${
-                      location.pathname === link.path
-                        ? 'text-brand bg-brand/10'
-                        : 'text-white hover:text-brand hover:bg-white/5'
-                    }`}
                   >
-                    {link.label}
-                  </motion.button>
+                    <Link
+                      to={link.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block w-full text-left px-6 py-4 text-lg font-medium transition-colors ${
+                        location.pathname === link.path
+                          ? 'text-brand bg-brand/10'
+                          : 'text-white hover:text-brand hover:bg-white/5'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
                 ))}
 
                 {/* Divider */}
@@ -145,24 +163,32 @@ export const Navigation: React.FC<NavigationProps> = ({ showBack = false, onNavi
                     Rechtliches
                   </span>
                 </div>
-                <motion.button
+                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
-                  onClick={() => handleNavigation('/impressum')}
-                  className="w-full text-left px-6 py-3 text-base text-neutral-400 hover:text-white transition-colors"
                 >
-                  Impressum
-                </motion.button>
-                <motion.button
+                  <Link
+                    to="/impressum"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full text-left px-6 py-3 text-base text-neutral-400 hover:text-white transition-colors"
+                  >
+                    Impressum
+                  </Link>
+                </motion.div>
+                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.45 }}
-                  onClick={() => handleNavigation('/datenschutz')}
-                  className="w-full text-left px-6 py-3 text-base text-neutral-400 hover:text-white transition-colors"
                 >
-                  Datenschutz
-                </motion.button>
+                  <Link
+                    to="/datenschutz"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full text-left px-6 py-3 text-base text-neutral-400 hover:text-white transition-colors"
+                  >
+                    Datenschutz
+                  </Link>
+                </motion.div>
               </nav>
 
               {/* Footer */}
