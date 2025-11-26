@@ -20,7 +20,7 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       category: 'digital',
       cols: 1,
       image: '/images/services/webdesign-ecommerce-optimized.webp',
-      srcSet: '/images/services/webdesign-ecommerce-640w.webp 640w, /images/services/webdesign-ecommerce-1024w.webp 1024w, /images/services/webdesign-ecommerce-1920w.webp 1920w',
+      srcSet: '/images/services/webdesign-ecommerce-420w.webp 420w, /images/services/webdesign-ecommerce-640w.webp 640w, /images/services/webdesign-ecommerce-1024w.webp 1024w, /images/services/webdesign-ecommerce-1920w.webp 1920w',
       href: '/webdesign-ecommerce'
     },
     {
@@ -31,7 +31,7 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       category: 'digital',
       cols: 1,
       image: '/images/services/google-marketing-optimized.webp',
-      srcSet: '/images/services/google-marketing-640w.webp 640w, /images/services/google-marketing-1024w.webp 1024w, /images/services/google-marketing-1920w.webp 1920w',
+      srcSet: '/images/services/google-marketing-420w.webp 420w, /images/services/google-marketing-640w.webp 640w, /images/services/google-marketing-1024w.webp 1024w, /images/services/google-marketing-1920w.webp 1920w',
       href: '/google-marketing'
     },
     {
@@ -42,7 +42,7 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       category: 'digital',
       cols: 1,
       image: '/images/services/ki-automatisierungen-optimized.webp',
-      srcSet: '/images/services/ki-automatisierungen-640w.webp 640w, /images/services/ki-automatisierungen-1024w.webp 1024w, /images/services/ki-automatisierungen-1920w.webp 1920w',
+      srcSet: '/images/services/ki-automatisierungen-420w.webp 420w, /images/services/ki-automatisierungen-640w.webp 640w, /images/services/ki-automatisierungen-1024w.webp 1024w, /images/services/ki-automatisierungen-1920w.webp 1920w',
       href: '/ki-automatisierungen'
     },
     {
@@ -53,7 +53,7 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       category: 'digital',
       cols: 1,
       image: '/images/services/beratung-strategie-optimized.webp',
-      srcSet: '/images/services/beratung-strategie-640w.webp 640w, /images/services/beratung-strategie-1024w.webp 1024w, /images/services/beratung-strategie-1920w.webp 1920w',
+      srcSet: '/images/services/beratung-strategie-420w.webp 420w, /images/services/beratung-strategie-640w.webp 640w, /images/services/beratung-strategie-1024w.webp 1024w, /images/services/beratung-strategie-1920w.webp 1920w',
       href: '/beratung-strategie'
     }
   ],
@@ -66,7 +66,7 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       category: 'physical',
       cols: 2,
       image: '/images/services/print-folie-optimized.webp',
-      srcSet: '/images/services/print-folie-640w.webp 640w, /images/services/print-folie-1024w.webp 1024w, /images/services/print-folie-1920w.webp 1920w',
+      srcSet: '/images/services/print-folie-420w.webp 420w, /images/services/print-folie-640w.webp 640w, /images/services/print-folie-1024w.webp 1024w, /images/services/print-folie-1920w.webp 1920w',
       href: '/print-folie'
     },
     {
@@ -77,7 +77,7 @@ export const serviceData: Record<ServiceCategory, ServiceItem[]> = {
       category: 'physical',
       cols: 2,
       image: '/images/services/licht-leuchttechnik-optimized.webp',
-      srcSet: '/images/services/licht-leuchttechnik-640w.webp 640w, /images/services/licht-leuchttechnik-1024w.webp 1024w, /images/services/licht-leuchttechnik-1920w.webp 1920w',
+      srcSet: '/images/services/licht-leuchttechnik-420w.webp 420w, /images/services/licht-leuchttechnik-640w.webp 640w, /images/services/licht-leuchttechnik-1024w.webp 1024w, /images/services/licht-leuchttechnik-1920w.webp 1920w',
       href: '/licht-leuchttechnik'
     }
   ]
@@ -116,7 +116,7 @@ const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
         <img
           src={item.image}
           srcSet={item.srcSet}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px"
+          sizes="(max-width: 420px) 420px, (max-width: 640px) 640px, (max-width: 1024px) 50vw, 640px"
           alt={`${item.title} - Professional service showcasing modern ${item.category === 'digital' ? 'digital solutions' : 'physical branding'}`}
           width="1920"
           height="1080"

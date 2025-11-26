@@ -5,8 +5,8 @@ const path = require('path');
 const SERVICES_DIR = './public/images/services';
 const OUTPUT_DIR = './public/images/services';
 
-// Responsive breakpoints
-const SIZES = [640, 1024, 1920];
+// Responsive breakpoints (added 420 for mobile cards)
+const SIZES = [420, 640, 1024, 1920];
 const QUALITY = 80;
 
 async function getImageInfo(filepath) {
@@ -78,7 +78,7 @@ async function main() {
 
   const files = fs.readdirSync(SERVICES_DIR)
     .filter(f => /\.(webp|jpg|jpeg|png)$/i.test(f))
-    .filter(f => !f.includes('-640w') && !f.includes('-1024w') && !f.includes('-1920w') && !f.includes('-optimized'));
+    .filter(f => !f.includes('-420w') && !f.includes('-640w') && !f.includes('-1024w') && !f.includes('-1920w') && !f.includes('-optimized'));
 
   console.log(`Found ${files.length} images to process`);
 
