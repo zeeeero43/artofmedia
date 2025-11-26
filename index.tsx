@@ -17,10 +17,18 @@ const app = (
   </React.StrictMode>
 );
 
-// Check if page was pre-rendered (has child nodes)
-if (rootElement.hasChildNodes()) {
-  // Hydrate pre-rendered content
-  hydrateRoot(rootElement, app);
+// Check if page was pre-rendered (has child nodes with actual content)
+const hasPrerenderedContent = rootElement.hasChildNodes() &&
+  rootElement.innerHTML.length > 100;
+
+if (hasPrerenderedContent) {
+  // Hydrate pre-rendered content with error recovery
+  hydrateRoot(rootElement, app, {
+    onRecoverableError: (error) => {
+      // Suppress hydration warnings in production
+      console.warn('Hydration error:', error);
+    }
+  });
 } else {
   // Normal client-side render
   createRoot(rootElement).render(app);

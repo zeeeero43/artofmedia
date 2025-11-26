@@ -72,8 +72,15 @@ async function prerender() {
       // Wait for React to render
       await page.waitForSelector('#root > *', { timeout: 10000 });
 
-      // Additional wait for animations to settle
-      await new Promise(r => setTimeout(r, 1000));
+      // Wait for preloader to finish (words animation + exit)
+      // 4 words * 850ms + 800ms buffer + 1000ms exit = ~5.2s
+      await new Promise(r => setTimeout(r, 6000));
+
+      // Remove preloader overlay from HTML (causes hydration mismatch)
+      await page.evaluate(() => {
+        const preloader = document.querySelector('.fixed.inset-0.z-\\[10000\\]');
+        if (preloader) preloader.remove();
+      });
 
       // Get rendered HTML
       const html = await page.content();
