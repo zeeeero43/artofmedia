@@ -6,6 +6,7 @@ import { Home, ArrowLeft, Search, AlertTriangle, Code, Zap } from 'lucide-react'
 import { Navigation } from '../../components/navigation';
 import { Footer } from '../../components/footer';
 import { ContactModal } from '../../components/contact-modal';
+import { SEOHead } from '../../components/seo-head';
 
 const NotFoundPage = () => {
   const navigate = useNavigate();
@@ -59,6 +60,11 @@ const NotFoundPage = () => {
 
   return (
     <div className="relative w-full min-h-screen bg-neutral-950 text-white font-sans overflow-hidden">
+      <SEOHead
+        title="Seite nicht gefunden | art.of.media"
+        description="Die angeforderte Seite existiert nicht. Zurück zur Startseite von art.of.media Marketing Agentur Duisburg."
+        noindex={true}
+      />
 
       {/* Animated Grid Background */}
       <div className="fixed inset-0 pointer-events-none z-0">

@@ -7,6 +7,7 @@ import { Navigation } from '../../components/navigation';
 import { Footer } from '../../components/footer';
 import { ContactModal } from '../../components/contact-modal';
 import { SEOHead, createBreadcrumbSchema, createServiceSchema } from '../../components/seo-head';
+import { Breadcrumb } from '../../components/breadcrumb';
 
 // Reusable FAQ Component
 const FaqItem = ({ q, a }: { q: string, a: string }) => {
@@ -374,8 +375,13 @@ export default function BeratungStrategie() {
 
       <Navigation showBack={true} />
 
+      {/* Breadcrumb Navigation */}
+      <div className="pt-20 bg-white">
+        <Breadcrumb items={[{ name: 'Beratung & Strategie' }]} />
+      </div>
+
       {/* 1. HERO */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-white">
+      <section className="relative pt-12 pb-32 px-6 overflow-hidden bg-white">
         <div className="absolute inset-0 pointer-events-none opacity-30">
              <motion.div
                 animate={{ y: [0, -40] }}

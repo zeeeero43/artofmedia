@@ -8,6 +8,7 @@ import { Footer } from '../../components/footer';
 import { ContactModal } from '../../components/contact-modal';
 import { PageSpeedModal } from '../../components/pagespeed-modal';
 import { SEOHead, createBreadcrumbSchema, createServiceSchema } from '../../components/seo-head';
+import { Breadcrumb } from '../../components/breadcrumb';
 
 // Reusable FAQ Component
 const FaqItem = ({ q, a }: { q: string, a: string }) => {
@@ -458,8 +459,13 @@ export default function KIAutomatisierungenPage() {
       {/* NAV: Reusing Global Navigation */}
       <Navigation showBack={true} />
 
+      {/* Breadcrumb Navigation */}
+      <div className="pt-20 bg-white">
+        <Breadcrumb items={[{ name: 'KI Automatisierungen' }]} />
+      </div>
+
       {/* 1. HERO */}
-      <section className="relative pt-40 md:pt-48 pb-32 px-6 overflow-hidden bg-white">
+      <section className="relative pt-12 pb-32 px-6 overflow-hidden bg-white">
         {/* Grid Background */}
         <div className="absolute inset-0 pointer-events-none opacity-30">
              <motion.div 

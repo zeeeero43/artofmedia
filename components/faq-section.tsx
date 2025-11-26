@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "Welche Budgets sind erforderlich?",
-    a: "Projekte starten ab 5.000€ für Branding und Webdesign. Der genaue Preis hängt vom Umfang ab. Im kostenlosen Erstgespräch besprechen wir, was für dich sinnvoll ist."
+    a: "Der genaue Preis hängt vom Umfang deines Projekts ab. Im kostenlosen Erstgespräch besprechen wir, was für dich sinnvoll ist und erstellen ein individuelles Angebot."
   },
   {
     q: "Wie schnell können wir starten?",

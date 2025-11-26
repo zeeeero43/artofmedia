@@ -96,8 +96,8 @@ export const ServiceBento: React.FC<ServiceBentoProps> = ({ activeMode }) => {
           className="grid grid-cols-1 md:grid-cols-2 auto-rows-[320px] sm:auto-rows-[380px] md:auto-rows-[420px] gap-4 sm:gap-6"
         >
           <AnimatePresence mode="popLayout">
-            {serviceData[activeMode].map((item) => (
-              <Card key={item.id} item={item} />
+            {serviceData[activeMode].map((item, index) => (
+              <Card key={item.id} item={item} priority={index < 2} />
             ))}
           </AnimatePresence>
         </motion.div>
@@ -106,7 +106,7 @@ export const ServiceBento: React.FC<ServiceBentoProps> = ({ activeMode }) => {
   );
 };
 
-const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
+const Card: React.FC<{ item: ServiceItem; priority?: boolean }> = ({ item, priority = false }) => {
   const MotionLink = motion.create(Link);
 
   const cardContent = (
@@ -120,8 +120,9 @@ const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
           alt={`${item.title} - Professional service showcasing modern ${item.category === 'digital' ? 'digital solutions' : 'physical branding'}`}
           width="1920"
           height="1080"
-          loading="lazy"
-          decoding="async"
+          loading={priority ? "eager" : "lazy"}
+          decoding={priority ? "sync" : "async"}
+          fetchPriority={priority ? "high" : "auto"}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40 grayscale group-hover:grayscale-0"
         />
         {/* Overlay */}

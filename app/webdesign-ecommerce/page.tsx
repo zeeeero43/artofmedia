@@ -8,6 +8,7 @@ import { Footer } from '../../components/footer';
 import { ContactModal } from '../../components/contact-modal';
 import { PageSpeedModal } from '../../components/pagespeed-modal';
 import { SEOHead, createBreadcrumbSchema, createServiceSchema } from '../../components/seo-head';
+import { Breadcrumb } from '../../components/breadcrumb';
 
 // Reusable FAQ Component
 const FaqItem = ({ q, a }: { q: string, a: string }) => {
@@ -294,9 +295,9 @@ const NeuroVisualizer = () => {
                <div className="w-full h-1.5 md:h-2 bg-white/10 rounded" />
                <div className="w-3/4 h-1.5 md:h-2 bg-white/10 rounded" />
 
-               {/* TARGET CTA - Noch tiefer positioniert */}
+               {/* TARGET CTA */}
                <motion.div
-                 className="mt-16 md:mt-20 w-28 md:w-32 h-8 md:h-10 bg-brand/20 border border-brand rounded flex items-center justify-center relative"
+                 className="mt-4 md:mt-6 w-28 md:w-32 h-8 md:h-10 bg-brand/20 border border-brand rounded flex items-center justify-center relative"
                  animate={{
                     scale: [1, 1.1, 1],
                     boxShadow: ["0 0 0px rgba(0,255,41,0)", "0 0 20px rgba(0,255,41,0.5)", "0 0 0px rgba(0,255,41,0)"]
@@ -312,12 +313,6 @@ const NeuroVisualizer = () => {
          </div>
       </div>
 
-      {/* Heatmap Overlay Effect - auf dem Button positioniert */}
-      <motion.div
-         className="absolute top-[270px] left-[140px] md:top-[300px] md:left-[145px] w-24 h-24 md:w-32 md:h-32 bg-brand/30 rounded-full blur-2xl pointer-events-none mix-blend-screen"
-         animate={{ opacity: [0, 1, 0], scale: [0.5, 1.5, 1] }}
-         transition={{ duration: 3, repeat: Infinity, delay: 2 }}
-      />
 
       {/* Labels */}
       <div className="absolute top-4 left-4 bg-black/50 backdrop-blur px-3 py-1 rounded border border-white/10 text-[10px] font-mono text-brand uppercase tracking-widest">
@@ -417,8 +412,13 @@ export default function WebdesignPage() {
       {/* NAV: Reusing Global Navigation */}
       <Navigation showBack={true} />
 
+      {/* Breadcrumb Navigation */}
+      <div className="pt-20 bg-white">
+        <Breadcrumb items={[{ name: 'Webdesign & E-Commerce' }]} />
+      </div>
+
       {/* 1. HERO */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-white">
+      <section className="relative pt-12 pb-32 px-6 overflow-hidden bg-white">
         {/* Grid Background */}
         <div className="absolute inset-0 pointer-events-none opacity-30">
              <motion.div 

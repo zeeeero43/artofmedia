@@ -6,6 +6,7 @@ import { Navigation } from '../../components/navigation';
 import { Footer } from '../../components/footer';
 import { ContactModal } from '../../components/contact-modal';
 import { SEOHead, createBreadcrumbSchema, createServiceSchema } from '../../components/seo-head';
+import { Breadcrumb } from '../../components/breadcrumb';
 import { DarkAtNightVisualizer } from '../../components/animations/DarkAtNightVisualizer';
 import { EnergyCostVisualizer } from '../../components/animations/EnergyCostVisualizer';
 import { FadedSignVisualizer } from '../../components/animations/FadedSignVisualizer';
@@ -93,8 +94,13 @@ export default function LichtLeuchttechnikPage() {
       {/* NAV */}
       <Navigation showBack={true} />
 
+      {/* Breadcrumb Navigation */}
+      <div className="pt-20 bg-white">
+        <Breadcrumb items={[{ name: 'LED Lichttechnik' }]} />
+      </div>
+
       {/* 1. HERO */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-white">
+      <section className="relative pt-12 pb-32 px-6 overflow-hidden bg-white">
         {/* Grid Background */}
         <div className="absolute inset-0 pointer-events-none opacity-30">
              <motion.div
