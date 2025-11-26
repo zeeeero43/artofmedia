@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './src/index.css';
@@ -9,11 +9,19 @@ if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+const app = (
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// Check if page was pre-rendered (has child nodes)
+if (rootElement.hasChildNodes()) {
+  // Hydrate pre-rendered content
+  hydrateRoot(rootElement, app);
+} else {
+  // Normal client-side render
+  createRoot(rootElement).render(app);
+}
