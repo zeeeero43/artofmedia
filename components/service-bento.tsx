@@ -116,7 +116,7 @@ const Card: React.FC<{ item: ServiceItem }> = ({ item }) => {
         <img
           src={item.image}
           srcSet={item.srcSet}
-          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px"
           alt={`${item.title} - Professional service showcasing modern ${item.category === 'digital' ? 'digital solutions' : 'physical branding'}`}
           width="1920"
           height="1080"
