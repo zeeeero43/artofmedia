@@ -1012,8 +1012,8 @@ export default function KIAutomatisierungenPage() {
         </div>
       </section>
 
-      {/* NEW: CASE STUDY BROWSER WINDOWS */}
-      <section className="py-24 px-6 bg-neutral-900 border-t border-neutral-800 text-white overflow-hidden">
+      {/* NEW: CASE STUDY BROWSER WINDOWS - TEMPORARILY HIDDEN */}
+      {false && <section className="py-24 px-6 bg-neutral-900 border-t border-neutral-800 text-white overflow-hidden">
         <div className="container mx-auto max-w-7xl">
            <div className="mb-20 text-center">
               <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">Echte Ergebnisse</span>
@@ -1149,7 +1149,7 @@ export default function KIAutomatisierungenPage() {
 
            </div>
         </div>
-      </section>
+      </section>}
 
        {/* 7. FAQ */}
        <section className="py-24 px-6 bg-white border-t border-neutral-200">

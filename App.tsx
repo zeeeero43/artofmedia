@@ -187,10 +187,10 @@ function App() {
              <TrustSection />
           </div>
 
-          {/* 10. VISUAL TESTIMONIALS */}
-          <div className="relative z-10 bg-white border-t border-neutral-200">
+          {/* 10. VISUAL TESTIMONIALS - TEMPORARILY HIDDEN */}
+          {/* <div className="relative z-10 bg-white border-t border-neutral-200">
             <Testimonials onSelectReview={setSelectedTestimonialId} />
-          </div>
+          </div> */}
 
           {/* 11. MASSIVE FAQ */}
           <div className="relative z-10 bg-white border-t border-neutral-200">
@@ -261,8 +261,8 @@ function App() {
           {/* Global Contact Modal */}
           <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
-          {/* Global Testimonial Modal */}
-          <TestimonialModal selectedId={selectedTestimonialId} onClose={() => setSelectedTestimonialId(null)} />
+          {/* Global Testimonial Modal - TEMPORARILY HIDDEN */}
+          {/* <TestimonialModal selectedId={selectedTestimonialId} onClose={() => setSelectedTestimonialId(null)} /> */}
       </div>
     </main>
     );

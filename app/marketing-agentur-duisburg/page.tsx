@@ -429,8 +429,8 @@ export default function MarketingAgenturDuisburgPage() {
         </div>
       </section>
 
-      {/* CASE STUDIES / RESULTS */}
-      <section className="py-24 px-6 bg-neutral-950 text-white">
+      {/* CASE STUDIES / RESULTS - TEMPORARILY HIDDEN */}
+      {false && <section className="py-24 px-6 bg-neutral-950 text-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Erfolgsgeschichten</span>
@@ -488,7 +488,7 @@ export default function MarketingAgenturDuisburgPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* FAQ SECTION */}
       <section className="py-24 px-6 bg-white">

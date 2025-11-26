@@ -798,7 +798,7 @@ export default function WebdesignPage() {
         </div>
       </section>
 
-      {/* NEW: CASE STUDY BROWSER WINDOWS */}
+      {/* NEW: CASE STUDY BROWSER WINDOWS - TEMPORARILY HIDDEN
       <section className="py-24 px-6 bg-neutral-900 border-t border-neutral-800 text-white overflow-hidden">
         <div className="container mx-auto max-w-7xl">
            <div className="mb-20 text-center">
@@ -809,15 +809,15 @@ export default function WebdesignPage() {
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Case 1: Shop */}
-              <motion.div 
+              Case 1: Shop
+              <motion.div
                  initial={{ opacity: 0, y: 50 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
                  transition={{ duration: 0.8 }}
                  className="group col-span-1 md:col-span-2 relative h-[500px] bg-neutral-950 rounded-xl border border-neutral-800 shadow-2xl overflow-hidden flex flex-col"
               >
-                 {/* Browser Header */}
+                 Browser Header
                  <div className="h-10 bg-neutral-800 border-b border-neutral-700 flex items-center px-4 gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-500/80" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
@@ -826,11 +826,11 @@ export default function WebdesignPage() {
                        fashion-brand.com
                     </div>
                  </div>
-                 {/* Content */}
+                 Content
                  <div className="relative flex-grow overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2064&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent" />
-                    
+
                     <div className="absolute bottom-0 left-0 p-8 w-full">
                        <div className="flex gap-4 mb-4">
                           <span className="bg-brand text-neutral-950 text-xs font-bold px-3 py-1 rounded shadow-lg shadow-brand/20">+214% Umsatz</span>
@@ -842,25 +842,25 @@ export default function WebdesignPage() {
                  </div>
               </motion.div>
 
-              {/* Case 2: Ranking */}
-              <motion.div 
+              Case 2: Ranking
+              <motion.div
                  initial={{ opacity: 0, y: 50 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
                  transition={{ duration: 0.8, delay: 0.2 }}
                  className="group col-span-1 h-[500px] bg-neutral-950 rounded-xl border border-neutral-800 shadow-2xl overflow-hidden flex flex-col"
               >
-                 {/* Browser Header */}
+                 Browser Header
                  <div className="h-10 bg-neutral-800 border-b border-neutral-700 flex items-center px-4 gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-500/80" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                     <div className="w-3 h-3 rounded-full bg-green-500/80" />
                  </div>
-                 {/* Content */}
+                 Content
                  <div className="relative flex-grow overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent" />
-                    
+
                     <div className="absolute bottom-0 left-0 p-8 w-full">
                        <div className="flex gap-4 mb-4">
                           <span className="bg-brand text-neutral-950 text-xs font-bold px-3 py-1 rounded shadow-lg shadow-brand/20">Platz #1</span>
@@ -871,8 +871,8 @@ export default function WebdesignPage() {
                  </div>
               </motion.div>
 
-              {/* Case 3: Corporate */}
-              <motion.div 
+              Case 3: Corporate
+              <motion.div
                  initial={{ opacity: 0, y: 50 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
@@ -893,9 +893,9 @@ export default function WebdesignPage() {
                     </div>
                  </div>
               </motion.div>
-              
-               {/* Case 4: Speed */}
-               <motion.div 
+
+               Case 4: Speed
+               <motion.div
                  initial={{ opacity: 0, y: 50 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
@@ -908,7 +908,7 @@ export default function WebdesignPage() {
                     <div className="w-3 h-3 rounded-full bg-neutral-600" />
                  </div>
                  <div className="relative flex-grow overflow-hidden flex items-center justify-center bg-neutral-900">
-                    {/* Speed Visualization */}
+                    Speed Visualization
                     <div className="flex gap-12 text-center">
                         <div>
                            <div className="text-6xl font-display font-black text-brand mb-2">100</div>
@@ -923,7 +923,7 @@ export default function WebdesignPage() {
                            <div className="text-neutral-500 text-xs uppercase tracking-widest">Ladezeit</div>
                         </div>
                     </div>
-                    
+
                     <div className="absolute bottom-0 left-0 p-8 w-full text-left">
                          <div className="inline-block bg-white/10 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded border border-white/20 mb-2">
                            Next.js Highspeed
@@ -936,6 +936,7 @@ export default function WebdesignPage() {
            </div>
         </div>
       </section>
+      */}
 
        {/* 7. FAQ */}
        <section className="py-24 px-6 bg-white border-t border-neutral-200">
