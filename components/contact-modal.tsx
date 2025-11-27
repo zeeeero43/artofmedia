@@ -58,7 +58,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, sel
     setErrorMessage('');
 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const apiUrl = import.meta.env.PROD
+        ? '/api/contact'
+        : 'http://localhost:3001/api/contact';
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
