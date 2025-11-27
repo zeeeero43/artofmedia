@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { Check, ArrowRight, X, Sparkles, Shield, Zap, Clock, Award, Users, Quote, Star, Eye, AlertTriangle } from 'lucide-react';
+import { Check, ArrowRight, X, Sparkles, Shield, Clock, Award, Users, Eye, AlertTriangle } from 'lucide-react';
 import { TrustBar } from '../../components/trust-bar';
 import { Navigation } from '../../components/navigation';
 import { Footer } from '../../components/footer';
@@ -9,11 +9,9 @@ import { ProcessSection } from '../../components/process-section';
 import { ServiceGrid } from '../../components/service-grid';
 import { FadingPrintVisualizer } from '../../components/animations/FadingPrintVisualizer';
 import { FoliePeelingVisualizer } from '../../components/animations/FoliePeelingVisualizer';
-import { InvisibleSignVisualizer } from '../../components/animations/InvisibleSignVisualizer';
 import { CarWrappingShowcase } from '../../components/animations/CarWrappingShowcase';
 import { InvisibleShopVisualizer } from '../../components/animations/InvisibleShopVisualizer';
 import { FadedSignVisualizer } from '../../components/animations/FadedSignVisualizer';
-import { MaterialShowcaseVisualizer } from '../../components/animations/MaterialShowcaseVisualizer';
 import { SEOHead, createBreadcrumbSchema, createServiceSchema } from '../../components/seo-head';
 import { Breadcrumb } from '../../components/breadcrumb';
 
@@ -210,7 +208,10 @@ export default function PrintFoliePage() {
              </h2>
           </div>
 
-          <div className="space-y-40">
+          <div className="space-y-40 relative">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-neutral-800 -z-10" />
+
             {/* PROBLEM 1: BILLIG-DRUCK */}
             <div className="relative flex flex-col md:flex-row items-center gap-12 md:gap-20">
                <div className="w-full md:w-1/2 order-2 md:order-1 text-center md:text-right">
@@ -287,24 +288,6 @@ export default function PrintFoliePage() {
                </div>
             </div>
 
-            {/* PROBLEM 5: UNSICHTBARE WERBUNG */}
-            <div className="relative flex flex-col md:flex-row items-center gap-12 md:gap-20">
-               <div className="w-full md:w-1/2 order-1">
-                  <InvisibleSignVisualizer />
-               </div>
-
-               <div className="w-full md:w-1/2 order-2 text-center md:text-left">
-                 <div className="inline-block bg-red-500/10 text-red-500 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-red-500/30">
-                   <Zap size={14} className="inline mr-2" /> Problem 5: Masse unter
-                 </div>
-                 <h3 className="text-2xl md:text-4xl font-display font-bold mb-4 text-white leading-tight">
-                   "Standard-Werbung geht in der Masse unter."
-                 </h3>
-                 <p className="text-neutral-400 text-xl leading-relaxed">
-                   Ohne Qualität, ohne Design, ohne Statement. Deine Werbung ist nur Hintergrundrauschen.
-                 </p>
-               </div>
-            </div>
           </div>
 
         </div>

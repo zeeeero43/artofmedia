@@ -237,10 +237,6 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
                     transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                   />
 
-                  {/* Corner Badge */}
-                  <div className="absolute top-4 right-4 bg-brand text-neutral-950 font-mono text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    Deep Dive
-                  </div>
                 </motion.div>
 
                 {/* Right: Content */}

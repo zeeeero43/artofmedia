@@ -21,49 +21,91 @@ export const CarWrappingShowcase: React.FC = () => {
         {/* Car Silhouette */}
         <div className="relative">
           <svg
-            width="200"
-            height="120"
-            viewBox="0 0 200 120"
+            width="280"
+            height="140"
+            viewBox="0 0 280 140"
             className="drop-shadow-lg"
           >
-            {/* Car body base */}
+            {/* Car body base - bleibt weiß */}
             <motion.path
-              d="M 30 80 L 20 60 L 30 45 L 50 40 L 70 38 L 130 38 L 150 40 L 170 45 L 180 60 L 170 80 Z"
-              fill={phase === 0 ? "#FFFFFF" : phase === 1 ? "#E5E5E5" : "#00FF29"}
+              d="M 40 100 L 25 75 L 40 55 L 70 48 L 100 45 L 180 45 L 210 48 L 240 55 L 255 75 L 240 100 Z"
+              fill="#FFFFFF"
               stroke="#262626"
               strokeWidth="2"
-              animate={{
-                fill: phase === 0 ? "#FFFFFF" : phase === 1 ? ["#FFFFFF", "#00FF29"] : "#00FF29",
-              }}
-              transition={{ duration: 0.8 }}
             />
 
-            {/* Car windows */}
+            {/* Car roof/cabin */}
             <motion.path
-              d="M 60 42 L 70 42 L 75 50 L 60 50 Z"
-              fill={phase === 2 ? "#00FF29" : "#A3A3A3"}
-              opacity="0.6"
-              animate={{
-                fill: phase === 2 ? "#00FF29" : "#A3A3A3",
-              }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              d="M 85 48 L 95 25 L 185 25 L 195 48"
+              fill="none"
+              stroke="#262626"
+              strokeWidth="2"
             />
             <motion.path
-              d="M 130 42 L 125 50 L 140 50 L 140 42 Z"
-              fill={phase === 2 ? "#00FF29" : "#A3A3A3"}
-              opacity="0.6"
-              animate={{
-                fill: phase === 2 ? "#00FF29" : "#A3A3A3",
-              }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              d="M 85 48 L 95 25 L 185 25 L 195 48 Z"
+              fill="#FFFFFF"
+              stroke="#262626"
+              strokeWidth="2"
+            />
+
+            {/* Windows */}
+            <path
+              d="M 100 30 L 105 46 L 135 46 L 135 30 Z"
+              fill="#A3E3FF"
+              opacity="0.7"
+            />
+            <path
+              d="M 145 30 L 145 46 L 175 46 L 180 30 Z"
+              fill="#A3E3FF"
+              opacity="0.7"
             />
 
             {/* Wheels */}
-            <circle cx="55" cy="80" r="15" fill="#262626" />
-            <circle cx="55" cy="80" r="8" fill="#525252" />
-            <circle cx="145" cy="80" r="15" fill="#262626" />
-            <circle cx="145" cy="80" r="8" fill="#525252" />
+            <circle cx="75" cy="100" r="18" fill="#262626" />
+            <circle cx="75" cy="100" r="10" fill="#525252" />
+            <circle cx="75" cy="100" r="4" fill="#262626" />
+            <circle cx="205" cy="100" r="18" fill="#262626" />
+            <circle cx="205" cy="100" r="10" fill="#525252" />
+            <circle cx="205" cy="100" r="4" fill="#262626" />
+
+            {/* Door lines */}
+            <line x1="140" y1="48" x2="140" y2="95" stroke="#D4D4D4" strokeWidth="1" />
+
+            {/* Headlights */}
+            <ellipse cx="245" cy="72" rx="6" ry="8" fill="#FEF08A" opacity="0.8" />
+            <ellipse cx="35" cy="72" rx="6" ry="8" fill="#FCA5A5" opacity="0.8" />
           </svg>
+
+          {/* Werbefolierung - art.of.media Schriftzug */}
+          <AnimatePresence>
+            {(phase === 1 || phase === 2) && (
+              <motion.div
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[65%] pointer-events-none"
+                initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+                animate={{
+                  opacity: 1,
+                  clipPath: phase === 1 ? "inset(0 0% 0 0)" : "inset(0 0% 0 0)"
+                }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: phase === 1 ? 2 : 0.3, ease: "linear" }}
+              >
+                <svg width="160" height="30" viewBox="0 0 160 30">
+                  {/* art.of.media text */}
+                  <motion.text
+                    x="80"
+                    y="22"
+                    textAnchor="middle"
+                    className="font-display font-black"
+                    fill="#00FF29"
+                    fontSize="16"
+                    letterSpacing="-0.5"
+                  >
+                    art.of.media
+                  </motion.text>
+                </svg>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* Wrapping animation overlay */}
           <AnimatePresence>
@@ -71,35 +113,35 @@ export const CarWrappingShowcase: React.FC = () => {
               <>
                 {/* Wrapping tool/squeegee */}
                 <motion.div
-                  className="absolute top-8 left-0 w-1 h-20 bg-neutral-800 rounded-full"
+                  className="absolute top-[45%] left-[15%] w-1 h-8 bg-neutral-800 rounded-full"
                   initial={{ x: 0, opacity: 0 }}
-                  animate={{ x: [0, 200], opacity: [0, 1, 1, 0] }}
+                  animate={{ x: [0, 180], opacity: [0, 1, 1, 0] }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 2, ease: "linear" }}
                 />
 
                 {/* Sparkle effects */}
-                {[1, 2, 3, 4].map((i) => (
+                {[1, 2, 3].map((i) => (
                   <motion.div
                     key={i}
                     className="absolute"
                     style={{
-                      left: `${i * 25}%`,
-                      top: `${30 + Math.random() * 20}%`,
+                      left: `${20 + i * 20}%`,
+                      top: "40%",
                     }}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{
                       opacity: [0, 1, 0],
                       scale: [0, 1, 0],
-                      y: [0, -20],
+                      y: [0, -15],
                     }}
                     transition={{
-                      duration: 1,
-                      delay: i * 0.3,
+                      duration: 0.8,
+                      delay: i * 0.4,
                       repeat: 2,
                     }}
                   >
-                    <Sparkles size={16} className="text-brand" />
+                    <Sparkles size={14} className="text-brand" />
                   </motion.div>
                 ))}
               </>
@@ -132,12 +174,12 @@ export const CarWrappingShowcase: React.FC = () => {
             {phase === 0 && (
               <div className="space-y-1">
                 <div className="text-xs font-bold uppercase text-neutral-500">Vorher</div>
-                <div className="text-sm text-neutral-600">Standard Lack</div>
+                <div className="text-sm text-neutral-600">Fahrzeug ohne Werbung</div>
               </div>
             )}
             {phase === 1 && (
               <div className="space-y-1">
-                <div className="text-xs font-bold uppercase text-brand">Folierung läuft...</div>
+                <div className="text-xs font-bold uppercase text-brand">Beschriftung läuft...</div>
                 <div className="flex gap-1 justify-center">
                   <motion.div
                     className="w-2 h-2 bg-brand rounded-full"
@@ -160,7 +202,7 @@ export const CarWrappingShowcase: React.FC = () => {
             {phase === 2 && (
               <div className="space-y-1">
                 <div className="text-xs font-bold uppercase text-brand">Nachher</div>
-                <div className="text-sm text-neutral-950 font-bold">Premium Car-Wrapping</div>
+                <div className="text-sm text-neutral-950 font-bold">Fahrzeugbeschriftung</div>
               </div>
             )}
           </motion.div>
@@ -184,7 +226,7 @@ export const CarWrappingShowcase: React.FC = () => {
 
       {/* Label */}
       <div className="absolute top-4 left-4 text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
-        Car-Wrapping Process
+        Fahrzeugbeschriftung
       </div>
     </div>
   );

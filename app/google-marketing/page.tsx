@@ -218,37 +218,42 @@ const SERPCompetition = () => {
           </div>
        </div>
 
-       {/* Cursor scrolling past your ad to competitor */}
+       {/* Cursor: Startet unten, wischt hoch, steht still, klickt */}
        <motion.div
-         className="absolute z-[100] top-0 left-0 pointer-events-none"
+         className="absolute left-1/2 z-[100] pointer-events-none"
          animate={{
-            x: ["50%", "50%", "50%"],
-            y: ["120px", "120px", "50px", "50px"], // Scrolls from position 8 to position 1
+            y: ["200px", "200px", "85px", "85px", "200px"],
          }}
          transition={{
-            duration: 5,
-            times: [0, 0.3, 0.7, 1],
+            duration: 6,
+            times: [0, 0.1, 0.4, 0.75, 1],
             repeat: Infinity,
             ease: "easeInOut"
          }}
-         style={{ width: '100%', height: '100%' }}
        >
-          <div className="relative w-6 h-6 -translate-x-[2px] -translate-y-[2px]">
-             <MousePointer2 className="text-white drop-shadow-md fill-black absolute top-0 left-0" size={24} />
-             {/* Click Ripple on competitor */}
+          <div className="relative w-6 h-6">
+             <MousePointer2 className="text-white drop-shadow-md fill-black" size={24} />
+             {/* Click Ripple - wie original, aber nur einmal pro Zyklus */}
              <motion.div
                 animate={{ scale: [0, 1.5], opacity: [0.8, 0] }}
-                transition={{ duration: 0.5, repeat: Infinity, delay: 3.5 }}
-                className="absolute -top-2 -left-2 w-8 h-8 rounded-full border-2 border-brand/50 opacity-0"
+                transition={{ duration: 0.4, delay: 2.2, repeat: Infinity, repeatDelay: 5.6 }}
+                className="absolute -top-2 -left-2 w-8 h-8 rounded-full border-2 border-brand"
              />
           </div>
        </motion.div>
 
-       {/* Success Indicator */}
+       {/* Success Indicator - erscheint NACH dem Klick (bei 3.4s = 57%) */}
        <motion.div
-          animate={{ opacity: [0, 0, 1, 0], y: [0, 0, -20, -30] }}
-          transition={{ duration: 5, times: [0, 0.7, 0.75, 1], repeat: Infinity }}
-          className="absolute top-12 left-1/2 -translate-x-1/2 text-brand font-bold text-sm z-50 pointer-events-none whitespace-nowrap"
+          animate={{
+             opacity: [0, 0, 1, 1, 0, 0],
+             y: [0, 0, 0, -15, -25, -25]
+          }}
+          transition={{
+             duration: 6,
+             times: [0, 0.56, 0.6, 0.7, 0.78, 1],
+             repeat: Infinity
+          }}
+          className="absolute top-14 left-1/2 -translate-x-1/2 text-brand font-bold text-sm z-50 pointer-events-none whitespace-nowrap"
        >
           ✓ Conversion
        </motion.div>
@@ -383,100 +388,82 @@ const ROIGrowthChart = () => {
   );
 };
 
-// 5. Intention Heatmap - User Journey based on Search Intent
+// 5. Intention Heatmap - Google Search Results Style
 const IntentionHeatmap = () => {
   return (
-    <div className="relative w-full h-[350px] md:h-[400px] bg-neutral-900 rounded-lg overflow-hidden shadow-2xl border border-neutral-800 group">
+    <div className="relative w-full h-[350px] md:h-[400px] bg-neutral-900 rounded-lg overflow-hidden shadow-2xl border border-neutral-800">
       {/* Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]" />
 
-      {/* Mockup Website Container */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-3/4 bg-neutral-950 border border-neutral-800 rounded flex flex-col p-4 shadow-xl">
+      {/* Mockup Google Search Results */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[85%] bg-neutral-950 border border-neutral-800 rounded flex flex-col p-4 shadow-xl">
          {/* Search Bar Header */}
-         <div className="flex items-center gap-2 mb-6 opacity-80">
+         <div className="flex items-center gap-2 mb-4">
             <div className="flex-1 bg-neutral-800 rounded-full px-4 py-2 flex items-center gap-2">
                <Search size={14} className="text-brand" />
-               <div className="w-20 h-2 bg-white/20 rounded" />
+               <div className="w-24 h-2 bg-white/20 rounded" />
             </div>
          </div>
 
-         {/* Content Areas with User Paths */}
-         <div className="flex gap-4 h-full relative">
-            {/* Left: Content Sections */}
-            <div className="w-1/2 flex flex-col gap-4">
-               {/* Informational (Blog) - Blue Dot */}
+         {/* Search Results - Untereinander wie bei Google */}
+         <div className="flex flex-col gap-2 flex-1">
+            {/* Result 1 - Transactional Intent (STARK - Kaufbereit) - OBEN */}
+            <motion.div
+               className="bg-brand/10 rounded p-2 border-2 border-brand relative"
+               animate={{
+                  boxShadow: ["0 0 0px rgba(0,255,41,0)", "0 0 25px rgba(0,255,41,0.5)", "0 0 0px rgba(0,255,41,0)"]
+               }}
+               transition={{ duration: 2, repeat: Infinity }}
+            >
+               <div className="w-1/4 h-1.5 bg-brand/60 rounded mb-1" />
+               <div className="w-1/3 h-1 bg-white/10 rounded mb-1" />
+               <div className="w-2/5 h-1 bg-white/10 rounded mb-1" />
+               <div className="w-1/2 h-1 bg-white/10 rounded mb-1" />
+               <div className="w-3/5 h-1 bg-white/10 rounded" />
                <motion.div
-                  className="relative bg-neutral-800 rounded p-3 h-1/3 border border-transparent"
-                  whileHover={{ borderColor: "#3B82F6" }}
-               >
-                  <div className="w-3/4 h-2 bg-white/10 rounded mb-2" />
-                  <div className="w-full h-1.5 bg-white/5 rounded mb-1" />
-                  <div className="w-5/6 h-1.5 bg-white/5 rounded" />
+                  className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-brand"
+                  animate={{ scale: [1, 1.3, 1], opacity: [0.8, 1, 0.8] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+               />
+            </motion.div>
 
-                  <motion.div
-                     className="absolute top-2 right-2 w-3 h-3 rounded-full bg-blue-500"
-                     animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }}
-                     transition={{ duration: 2, repeat: Infinity, delay: 0 }}
-                  />
-                  <div className="absolute -top-8 right-0 text-[10px] text-blue-400 font-bold uppercase tracking-wider">
-                     Info
-                  </div>
-               </motion.div>
-
-               {/* Navigational (About) - Yellow Dot */}
-               <motion.div
-                  className="relative bg-neutral-800 rounded p-3 h-1/3 border border-transparent"
-                  whileHover={{ borderColor: "#FBBF24" }}
-               >
-                  <div className="w-2/3 h-2 bg-white/10 rounded mb-2" />
-                  <div className="w-full h-1.5 bg-white/5 rounded mb-1" />
-
-                  <motion.div
-                     className="absolute top-2 right-2 w-3 h-3 rounded-full bg-yellow-500"
-                     animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }}
-                     transition={{ duration: 2, repeat: Infinity, delay: 0.7 }}
-                  />
-                  <div className="absolute -top-8 right-0 text-[10px] text-yellow-400 font-bold uppercase tracking-wider">
-                     Nav
-                  </div>
-               </motion.div>
+            {/* Result 2 - Info Intent (schwach) */}
+            <div className="bg-neutral-800/50 rounded p-2 border border-neutral-700/50">
+               <div className="w-1/5 h-1.5 bg-blue-500/30 rounded mb-1" />
+               <div className="w-1/4 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-1/3 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-2/5 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-1/2 h-1 bg-white/5 rounded" />
             </div>
 
-            {/* Right: CTA Area - Transactional (Green Dot + Glow) */}
-            <div className="w-1/2 flex flex-col justify-center items-center relative">
-               <motion.div
-                  className="w-full bg-brand/20 border border-brand rounded p-4 flex items-center justify-center relative"
-                  animate={{
-                     scale: [1, 1.05, 1],
-                     boxShadow: ["0 0 0px rgba(0,255,41,0)", "0 0 30px rgba(0,255,41,0.6)", "0 0 0px rgba(0,255,41,0)"]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 1.4 }}
-               >
-                  <div className="w-20 h-3 bg-brand rounded" />
+            {/* Result 3 - Nav Intent (mittel) */}
+            <div className="bg-neutral-800/50 rounded p-2 border border-neutral-700/50">
+               <div className="w-1/5 h-1.5 bg-yellow-500/30 rounded mb-1" />
+               <div className="w-1/4 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-1/3 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-2/5 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-1/2 h-1 bg-white/5 rounded" />
+            </div>
 
-                  <motion.div
-                     className="absolute top-2 right-2 w-4 h-4 rounded-full bg-brand"
-                     animate={{ scale: [1, 1.5, 1], opacity: [0.8, 1, 0.8] }}
-                     transition={{ duration: 2, repeat: Infinity, delay: 1.4 }}
-                  />
-               </motion.div>
-
-               <div className="absolute -top-10 right-0 text-[10px] text-brand font-bold uppercase tracking-wider flex items-center gap-1">
-                  <Target size={12} />
-                  Kaufbereit
-               </div>
+            {/* Result 4 - weitere Anzeige */}
+            <div className="bg-neutral-800/50 rounded p-2 border border-neutral-700/50">
+               <div className="w-1/6 h-1.5 bg-neutral-600/30 rounded mb-1" />
+               <div className="w-1/5 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-1/4 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-1/3 h-1 bg-white/5 rounded mb-1" />
+               <div className="w-2/5 h-1 bg-white/5 rounded" />
             </div>
          </div>
       </div>
 
-      {/* Heatmap Glow on CTA */}
+      {/* Glow Effect - oben beim grünen Result */}
       <motion.div
-         className="absolute top-[50%] right-[15%] w-32 h-32 bg-brand/40 rounded-full blur-3xl pointer-events-none mix-blend-screen"
-         animate={{ opacity: [0, 1, 0], scale: [0.8, 1.2, 0.8] }}
-         transition={{ duration: 2, repeat: Infinity, delay: 1.4 }}
+         className="absolute top-[25%] left-1/2 -translate-x-1/2 w-48 h-24 bg-brand/40 rounded-full blur-3xl pointer-events-none"
+         animate={{ opacity: [0.3, 0.6, 0.3] }}
+         transition={{ duration: 2, repeat: Infinity }}
       />
 
-      {/* Labels */}
+      {/* Label */}
       <div className="absolute top-4 left-4 bg-black/50 backdrop-blur px-3 py-1 rounded border border-white/10 text-[10px] font-mono text-brand uppercase tracking-widest">
          Intent-Recognition
       </div>
@@ -617,7 +604,10 @@ export default function GoogleMarketingPage() {
              </h2>
           </div>
 
-          <div className="space-y-40">
+          <div className="space-y-40 relative">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-neutral-800 -z-10" />
+
             {/* STAGE 1: BUDGET BURN */}
             <div className="relative flex flex-col md:flex-row items-center gap-12 md:gap-20">
                <div className="w-full md:w-1/2 order-2 md:order-1 text-center md:text-right">
@@ -632,7 +622,7 @@ export default function GoogleMarketingPage() {
                  </p>
                </div>
 
-               <div className="w-full md:w-1/2 order-1 md:order-2">
+               <div className="w-full md:w-1/2 order-1 md:order-2 md:translate-x-4">
                   <AdBudgetBurn />
                </div>
             </div>
@@ -733,7 +723,7 @@ export default function GoogleMarketingPage() {
                       "Zielgruppenanalyse + Custom Strategie. Jedes Budget wird präzise eingesetzt.",
                       "Long-Tail Keywords. Höhere Conversion-Rate, niedrigere Kosten.",
                       "CTR 8-15%. Deine Anzeigen werden geklickt und konvertieren.",
-                      "40-120€ pro Conversion. Mehr Kunden, weniger Kosten."
+                      "10-120€ pro Conversion. Mehr Kunden, weniger Kosten."
                    ].map((item, i) => (
                       <li key={i} className="flex gap-4 items-start text-white font-medium text-lg">
                          <div className="bg-brand/20 p-1 rounded-full text-brand shrink-0 mt-0.5"><Check size={18} /></div>
@@ -891,13 +881,8 @@ export default function GoogleMarketingPage() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand/5 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors relative">
+                <div className="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
                   <MapPin className="text-brand" size={32} strokeWidth={2} />
-                  <motion.div
-                    className="absolute inset-0 border-2 border-brand rounded-full"
-                    animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
                 </div>
 
                 <h3 className="font-display font-bold text-3xl mb-4 text-neutral-950">Google Maps Optimierung</h3>
@@ -1209,7 +1194,7 @@ export default function GoogleMarketingPage() {
                 />
                 <FaqItem
                   q="Welches Budget brauche ich für Google Ads?"
-                  a="Minimum €500-1000/Monat für sinnvolle Tests und Optimierung. Je nach Branche und Wettbewerb kann ein höheres Budget notwendig sein. Wir beraten dich im Strategiegespräch individuell."
+                  a="Minimum €200-1000/Monat für sinnvolle Tests und Optimierung. Je nach Branche und Wettbewerb kann ein höheres Budget notwendig sein. Wir beraten dich im Strategiegespräch individuell."
                 />
                 <FaqItem
                   q="Funktioniert das auch lokal (nur eine Stadt)?"

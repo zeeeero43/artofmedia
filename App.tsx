@@ -177,10 +177,10 @@ function App() {
             <ProcessSection activeMode={mode} />
           </div>
 
-          {/* 8. TRANSFORMATION SLIDER (Before/After) */}
-          <div className="relative z-10 bg-white border-t border-neutral-200">
+          {/* 8. TRANSFORMATION SLIDER (Before/After) - TEMPORARILY HIDDEN */}
+          {/* <div className="relative z-10 bg-white border-t border-neutral-200">
              <ComparisonSection activeMode={mode} />
-          </div>
+          </div> */}
 
           {/* 9. DASHBOARD STATS */}
           <div className="relative z-10 bg-white border-t border-neutral-200">

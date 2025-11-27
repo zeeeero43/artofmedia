@@ -541,7 +541,10 @@ export default function KIAutomatisierungenPage() {
              </h2>
           </div>
 
-          <div className="space-y-40">
+          <div className="space-y-40 relative">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-neutral-800 -z-10" />
+
             {/* STAGE 1: TIME */}
             <div className="relative flex flex-col md:flex-row items-center gap-12 md:gap-20">
                <div className="w-full md:w-1/2 order-2 md:order-1 text-center md:text-right">
@@ -560,9 +563,6 @@ export default function KIAutomatisierungenPage() {
                   <TimeComparisonAnimation />
                </div>
             </div>
-
-            {/* Connecting Line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-neutral-800 -z-10" />
 
             {/* STAGE 2: LEADS */}
             <div className="relative flex flex-col md:flex-row items-center gap-12 md:gap-20">

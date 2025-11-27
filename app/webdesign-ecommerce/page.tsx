@@ -496,7 +496,7 @@ export default function WebdesignPage() {
              </h2>
           </div>
 
-          <div className="space-y-40">
+          <div className="space-y-40 relative">
             {/* STAGE 1: MONEY */}
             <div className="relative flex flex-col md:flex-row items-center gap-12 md:gap-20">
                <div className="w-full md:w-1/2 order-2 md:order-1 text-center md:text-right">
