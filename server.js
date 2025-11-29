@@ -82,7 +82,7 @@ app.post('/api/contact', async (req, res) => {
           </div>
 
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
-            <p>Diese E-Mail wurde über das Kontaktformular auf artofmedia.com gesendet.</p>
+            <p>Diese E-Mail wurde über das Kontaktformular auf artofmedia-marketing.de gesendet.</p>
             <p>Zeitstempel: ${new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' })}</p>
           </div>
         </div>
