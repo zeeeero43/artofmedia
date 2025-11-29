@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ showMainCta = true, onContactCli
         
         {showMainCta && (
           <div className="flex flex-col items-center text-center mb-24 max-w-4xl mx-auto">
-            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] mb-6 sm:mb-8 uppercase">
+            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] mb-6 sm:mb-8 uppercase text-neutral-200">
               GENUG<br/>THEORIE.<br/>
               <span className="text-brand">LASS UNS<br/>STARTEN.</span>
             </h2>

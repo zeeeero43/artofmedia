@@ -102,7 +102,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ activeMode }) =>
            <span className="text-brand font-mono text-sm uppercase tracking-widest mb-6 block">
              Workflow: {activeMode}
            </span>
-           <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl text-neutral-950 uppercase">
+           <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl text-neutral-700 uppercase">
              Der Prozess
            </h2>
         </div>
@@ -156,7 +156,7 @@ const ProcessItem: React.FC<{ step: ProcessStep; index: number, activeMode: stri
         <span className="font-mono font-bold text-brand mb-2 block text-xs tracking-widest uppercase">
           Schritt {step.number}
         </span>
-        <h3 className="font-display font-bold text-3xl md:text-4xl text-neutral-950 mb-4">
+        <h3 className="font-display font-bold text-3xl md:text-4xl text-neutral-700 mb-4">
           {step.title}
         </h3>
         <p className="text-neutral-500 text-lg leading-relaxed">

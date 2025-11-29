@@ -63,7 +63,7 @@ export const LEDBrightnessVisualizer = () => {
           }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div className="font-display font-black text-2xl text-brand">OFFEN</div>
+          <div className="font-display font-bold text-2xl text-brand">OFFEN</div>
 
           {/* Glow */}
           <motion.div
@@ -147,7 +147,7 @@ export const LEDBrightnessVisualizer = () => {
           }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div className="font-display font-black text-2xl text-brand">OFFEN</div>
+          <div className="font-display font-bold text-2xl text-brand">OFFEN</div>
 
           {/* Stronger Night Glow */}
           <motion.div

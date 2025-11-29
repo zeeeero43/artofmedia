@@ -36,12 +36,12 @@ export const HeroSection: React.FC = () => {
         </motion.div>
 
         {/* Massive Headline */}
-        <h1 className="font-display font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-neutral-950 mb-8 sm:mb-12 uppercase max-w-6xl mx-auto">
+        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-neutral-700 mb-8 sm:mb-12 uppercase max-w-6xl mx-auto">
           <span className="block">MARKETING</span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-b from-neutral-950 to-neutral-700">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-b from-neutral-700 to-neutral-500">
             <ScrambleText text="AGENTUR" speed={50} delay={200} />
           </span>
-          <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 sm:mt-4 tracking-normal text-neutral-600">
+          <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 sm:mt-4 tracking-normal text-neutral-500">
             Duisburg
           </span>
           <span className="sr-only"> - Webdesign, E-Commerce und Werbetechnik</span>

@@ -95,7 +95,7 @@ export const CarWrappingShowcase: React.FC = () => {
                     x="80"
                     y="22"
                     textAnchor="middle"
-                    className="font-display font-black"
+                    className="font-display font-bold"
                     fill="#00FF29"
                     fontSize="16"
                     letterSpacing="-0.5"

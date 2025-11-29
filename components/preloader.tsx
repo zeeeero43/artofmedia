@@ -68,7 +68,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onFinish }) => {
                   animate={{ y: "0%", opacity: 1 }}
                   exit={{ y: "-100%", opacity: 0 }}
                   transition={{ duration: 0.5, ease: "backOut" }}
-                  className={`block font-display font-black text-4xl md:text-6xl lg:text-7xl uppercase tracking-tight text-center ${index === words.length - 1 ? "text-brand" : "text-white"}`}
+                  className={`block font-display font-bold text-4xl md:text-6xl lg:text-7xl uppercase tracking-tight text-center ${index === words.length - 1 ? "text-brand" : "text-white"}`}
                   aria-hidden="true"
                 >
                   {words[index]}

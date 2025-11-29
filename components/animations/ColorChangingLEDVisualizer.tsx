@@ -54,7 +54,7 @@ export const ColorChangingLEDVisualizer: React.FC = () => {
               ]
             }}
             transition={{ textShadow: { duration: 2, repeat: Infinity } }}
-            className="font-display font-black text-6xl md:text-7xl tracking-tighter"
+            className="font-display font-bold text-6xl md:text-7xl tracking-tighter"
           >
             LOGO
           </motion.h2>

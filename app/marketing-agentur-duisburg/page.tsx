@@ -215,7 +215,7 @@ export default function MarketingAgenturDuisburgPage() {
             </div>
 
             {/* H1 - Primary Keyword */}
-            <h1 className="font-display font-black text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter">
+            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter">
               MARKETING AGENTUR<br/>
               <span className="text-brand">DUISBURG</span>
             </h1>
@@ -266,24 +266,24 @@ export default function MarketingAgenturDuisburgPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-center">
             <div>
-              <div className="text-3xl font-display font-black text-brand">50+</div>
+              <div className="text-3xl font-display font-bold text-brand">50+</div>
               <div className="text-xs uppercase tracking-widest text-neutral-500">Projekte in Duisburg</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-neutral-200" />
             <div>
-              <div className="text-3xl font-display font-black text-brand">5.0</div>
+              <div className="text-3xl font-display font-bold text-brand">5.0</div>
               <div className="text-xs uppercase tracking-widest text-neutral-500 flex items-center gap-1">
                 <Star size={12} className="fill-brand text-brand" /> Google Bewertung
               </div>
             </div>
             <div className="hidden md:block w-px h-12 bg-neutral-200" />
             <div>
-              <div className="text-3xl font-display font-black text-brand">24h</div>
+              <div className="text-3xl font-display font-bold text-brand">24h</div>
               <div className="text-xs uppercase tracking-widest text-neutral-500">Antwortzeit</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-neutral-200" />
             <div>
-              <div className="text-3xl font-display font-black text-brand">NRW</div>
+              <div className="text-3xl font-display font-bold text-brand">NRW</div>
               <div className="text-xs uppercase tracking-widest text-neutral-500">Servicegebiet</div>
             </div>
           </div>
@@ -295,7 +295,7 @@ export default function MarketingAgenturDuisburgPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Unsere Leistungen</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-6">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl mb-6">
               FULL-SERVICE MARKETING<br/>IN DUISBURG
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
@@ -318,7 +318,7 @@ export default function MarketingAgenturDuisburgPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Lokale Expertise</span>
-              <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-8 leading-tight">
+              <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl mb-8 leading-tight">
                 WARUM EINE<br/>
                 <span className="text-brand">LOKALE AGENTUR</span><br/>
                 IN DUISBURG?
@@ -434,7 +434,7 @@ export default function MarketingAgenturDuisburgPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Erfolgsgeschichten</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl">
               ERGEBNISSE FÜR<br/>UNTERNEHMEN IN DUISBURG
             </h2>
           </div>
@@ -445,7 +445,7 @@ export default function MarketingAgenturDuisburgPage() {
               whileHover={{ y: -8 }}
               className="bg-neutral-900 border border-neutral-800 p-8"
             >
-              <div className="text-5xl font-display font-black text-brand mb-4">+340%</div>
+              <div className="text-5xl font-display font-bold text-brand mb-4">+340%</div>
               <h3 className="font-bold text-xl mb-2">Mehr Website-Anfragen</h3>
               <p className="text-neutral-400 text-sm mb-4">
                 Lokaler Handwerksbetrieb in Duisburg nach Website-Relaunch und Google Ads Kampagne.
@@ -461,7 +461,7 @@ export default function MarketingAgenturDuisburgPage() {
               whileHover={{ y: -8 }}
               className="bg-neutral-900 border border-neutral-800 p-8"
             >
-              <div className="text-5xl font-display font-black text-brand mb-4">15</div>
+              <div className="text-5xl font-display font-bold text-brand mb-4">15</div>
               <h3 className="font-bold text-xl mb-2">Fahrzeuge beschriftet</h3>
               <p className="text-neutral-400 text-sm mb-4">
                 Komplette Fahrzeugflotte eines Duisburger Unternehmens – Design, Produktion und Montage.
@@ -476,7 +476,7 @@ export default function MarketingAgenturDuisburgPage() {
               whileHover={{ y: -8 }}
               className="bg-neutral-900 border border-neutral-800 p-8"
             >
-              <div className="text-5xl font-display font-black text-brand mb-4">Platz 1</div>
+              <div className="text-5xl font-display font-bold text-brand mb-4">Platz 1</div>
               <h3 className="font-bold text-xl mb-2">Google Ranking</h3>
               <p className="text-neutral-400 text-sm mb-4">
                 Lokaler Dienstleister auf Position 1 bei Google für sein Hauptkeyword in Duisburg.
@@ -495,7 +495,7 @@ export default function MarketingAgenturDuisburgPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Häufige Fragen</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl">
               FAQ: MARKETING AGENTUR<br/>IN DUISBURG
             </h2>
           </div>
@@ -532,7 +532,7 @@ export default function MarketingAgenturDuisburgPage() {
       {/* FINAL CTA */}
       <section className="py-24 px-6 bg-neutral-950 text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl mb-6">
+          <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl mb-6">
             BEREIT FÜR<br/>
             <span className="text-brand">MEHR WACHSTUM?</span>
           </h2>

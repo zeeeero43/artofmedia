@@ -71,7 +71,7 @@ export const WeatherResistanceVisualizer: React.FC = () => {
                 ]
               }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="font-display font-black text-4xl text-red-500"
+              className="font-display font-bold text-4xl text-red-500"
             >
               LOGO
             </motion.div>
@@ -142,7 +142,7 @@ export const WeatherResistanceVisualizer: React.FC = () => {
                 ]
               }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="font-display font-black text-4xl text-brand"
+              className="font-display font-bold text-4xl text-brand"
             >
               LOGO
             </motion.div>

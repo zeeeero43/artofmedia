@@ -96,7 +96,7 @@ const AdBudgetBurn = () => {
 
           {/* Flow Arrows */}
           <motion.div
-             className="text-red-500 text-3xl font-black"
+             className="text-red-500 text-3xl font-bold"
              animate={{ x: [0, 5, 0], opacity: [0.4, 1, 0.4] }}
              transition={{ duration: 1.5, repeat: Infinity }}
           >
@@ -549,7 +549,7 @@ export default function GoogleMarketingPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
+            className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.9] mb-8 tracking-tighter text-neutral-700"
           >
             DEINE <span className="text-brand">GOOGLE ADS</span> KOSTEN<br />
             GELD, ABER KEINE<br/>
@@ -599,7 +599,7 @@ export default function GoogleMarketingPage() {
              <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">
                 Die Wahrheit
              </span>
-             <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl leading-[0.9]">
+             <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl leading-[0.9]">
                 WARUM DEIN GOOGLE ADS<br/><span className="text-red-500">BUDGET VERSCHWINDET.</span>
              </h2>
           </div>
@@ -674,7 +674,7 @@ export default function GoogleMarketingPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Google Ads Vergleich</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-950 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
               WAS IST DER UNTERSCHIED?
             </h2>
           </div>
@@ -688,7 +688,7 @@ export default function GoogleMarketingPage() {
              >
                 <div className="mb-8 pb-8 border-b border-neutral-200">
                    <div className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2">Standard Kampagnen</div>
-                   <h3 className="font-display font-black text-3xl md:text-4xl text-neutral-400">Normale Google Ads</h3>
+                   <h3 className="font-display font-bold text-3xl md:text-4xl text-neutral-400">Normale Google Ads</h3>
                 </div>
                 <ul className="space-y-6 flex-grow">
                    {[
@@ -716,7 +716,7 @@ export default function GoogleMarketingPage() {
 
                 <div className="mb-8 pb-8 border-b border-neutral-800 relative z-10">
                    <div className="text-sm font-bold uppercase tracking-widest text-brand mb-2">Unsere Strategie</div>
-                   <h3 className="font-display font-black text-3xl md:text-4xl text-white">Optimierte Kampagnen</h3>
+                   <h3 className="font-display font-bold text-3xl md:text-4xl text-white">Optimierte Kampagnen</h3>
                 </div>
                 <ul className="space-y-6 flex-grow relative z-10">
                    {[
@@ -743,7 +743,7 @@ export default function GoogleMarketingPage() {
                    <div className="flex items-center justify-center gap-2 text-brand font-bold uppercase tracking-widest text-xs mb-4">
                       <BarChart3 size={16} /> Performance-Steigerung
                    </div>
-                   <h3 className="font-display font-black text-2xl sm:text-4xl md:text-5xl text-white leading-none mb-4">
+                   <h3 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl text-white leading-none mb-4">
                       +340% <br/><span className="text-neutral-400 text-2xl md:text-3xl font-sans font-normal">ROAS Verbesserung</span>
                    </h3>
                    <p className="text-neutral-400">Durchschnittliches Ergebnis nach 60 Tagen Optimierung.</p>
@@ -761,7 +761,7 @@ export default function GoogleMarketingPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Ganzheitliche Google-Strategie</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-950 uppercase mb-6">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase mb-6">
               Google Marketing<br/>Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
@@ -932,7 +932,7 @@ export default function GoogleMarketingPage() {
                 <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">
                    Suchverhalten verstehen
                 </span>
-                <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-8 leading-tight">
+                <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl mb-8 leading-tight">
                    INTENTION<br/>RECOGNITION.
                 </h2>
                 <p className="text-lg text-neutral-600 leading-relaxed mb-8">
@@ -964,7 +964,7 @@ export default function GoogleMarketingPage() {
       <section className="py-32 px-6 bg-neutral-50">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-24">
-            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl mb-6 uppercase">Wähle dein Paket</h2>
+            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl mb-6 uppercase">Wähle dein Paket</h2>
             <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
                Wir verkaufen keine Stunden. Wir verkaufen Ergebnisse.
                Wähle das passende Fundament für dein Online-Wachstum.
@@ -1039,7 +1039,7 @@ export default function GoogleMarketingPage() {
         <div className="container mx-auto max-w-7xl">
            <div className="mb-20 text-center">
               <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">Echte Ergebnisse</span>
-              <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl text-white uppercase leading-[0.9]">
+              <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl text-white uppercase leading-[0.9]">
                  Kampagnen, die<br/>performen.
               </h2>
            </div>
@@ -1096,7 +1096,7 @@ export default function GoogleMarketingPage() {
                  <div className="relative flex-grow overflow-hidden bg-neutral-900 flex items-center justify-center">
                     <div className="text-center z-10">
                        <MapPin className="text-brand mx-auto mb-4" size={48} />
-                       <div className="text-6xl font-display font-black text-brand mb-2">12</div>
+                       <div className="text-6xl font-display font-bold text-brand mb-2">12</div>
                        <div className="text-neutral-400 text-sm uppercase tracking-widest">Buchungen / Tag</div>
                     </div>
 
@@ -1153,15 +1153,15 @@ export default function GoogleMarketingPage() {
                     {/* Performance Metrics */}
                     <div className="flex gap-12 text-center flex-wrap justify-center px-8">
                         <div>
-                           <div className="text-3xl sm:text-5xl md:text-6xl font-display font-black text-brand mb-2">8.4%</div>
+                           <div className="text-3xl sm:text-5xl md:text-6xl font-display font-bold text-brand mb-2">8.4%</div>
                            <div className="text-neutral-500 text-xs uppercase tracking-widest">Conversion Rate</div>
                         </div>
                         <div>
-                           <div className="text-3xl sm:text-5xl md:text-6xl font-display font-black text-brand mb-2">-60%</div>
+                           <div className="text-3xl sm:text-5xl md:text-6xl font-display font-bold text-brand mb-2">-60%</div>
                            <div className="text-neutral-500 text-xs uppercase tracking-widest">CPC Reduktion</div>
                         </div>
                         <div>
-                           <div className="text-3xl sm:text-5xl md:text-6xl font-display font-black text-brand mb-2">#1-3</div>
+                           <div className="text-3xl sm:text-5xl md:text-6xl font-display font-bold text-brand mb-2">#1-3</div>
                            <div className="text-neutral-500 text-xs uppercase tracking-widest">Positionen</div>
                         </div>
                     </div>
@@ -1182,7 +1182,7 @@ export default function GoogleMarketingPage() {
        {/* 9. FAQ */}
        <section className="py-24 px-6 bg-white border-t border-neutral-200">
           <div className="container mx-auto max-w-4xl">
-             <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
+             <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
              <div className="space-y-0 border-t border-neutral-200">
                 <FaqItem
                   q="Wie lange dauert es bis zu ersten Ergebnissen?"

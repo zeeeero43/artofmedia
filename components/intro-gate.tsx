@@ -37,7 +37,7 @@ export const IntroGate: React.FC<IntroGateProps> = ({ onChoose }) => {
         <span className="font-mono text-xs uppercase tracking-[0.3em] mb-4">
           Wählen Sie Ihren Bereich
         </span>
-        <h2 className="font-display font-black text-2xl md:text-4xl uppercase tracking-tight text-center px-4">
+        <h2 className="font-display font-bold text-2xl md:text-4xl uppercase tracking-tight text-center px-4">
           Wie können wir Ihnen helfen?
         </h2>
       </motion.div>
@@ -80,7 +80,7 @@ export const IntroGate: React.FC<IntroGateProps> = ({ onChoose }) => {
                 </span>
              </div>
 
-             <h2 className="font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter mb-4 group-hover:text-brand transition-colors">
+             <h2 className="font-display font-bold text-4xl md:text-6xl text-white uppercase tracking-tighter mb-4 group-hover:text-brand transition-colors">
                Virtuelle<br/>Dominanz
              </h2>
              <p className="text-neutral-400 max-w-xs mx-auto text-sm md:text-base font-medium mb-8 group-hover:text-white transition-colors">
@@ -148,7 +148,7 @@ export const IntroGate: React.FC<IntroGateProps> = ({ onChoose }) => {
                 </span>
              </div>
 
-             <h2 className="font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter mb-4 group-hover:text-brand transition-colors">
+             <h2 className="font-display font-bold text-4xl md:text-6xl text-white uppercase tracking-tighter mb-4 group-hover:text-brand transition-colors">
                Physische<br/>Präsenz
              </h2>
              <p className="text-neutral-300 max-w-xs mx-auto text-sm md:text-base font-medium mb-8 group-hover:text-white transition-colors">

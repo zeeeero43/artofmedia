@@ -233,7 +233,7 @@ const ScalingAnimation = () => {
                    key={requests}
                    initial={{ scale: 1.2, color: "#00FF29" }}
                    animate={{ scale: 1, color: "#a3a3a3" }}
-                   className="text-2xl font-display font-black text-neutral-400 tabular-nums"
+                   className="text-2xl font-display font-bold text-neutral-400 tabular-nums"
                 >
                    {requests}
                 </motion.div>
@@ -282,7 +282,7 @@ const ScalingAnimation = () => {
                    key={`ki-${requests}`}
                    initial={{ scale: 1.2 }}
                    animate={{ scale: 1 }}
-                   className="text-2xl font-display font-black text-brand tabular-nums"
+                   className="text-2xl font-display font-bold text-brand tabular-nums"
                 >
                    {requests}
                 </motion.div>
@@ -489,7 +489,7 @@ export default function KIAutomatisierungenPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
+            className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-700"
           >
             <span className="text-brand">KI</span> ARBEITET.<br />
             DU NICHT.
@@ -536,7 +536,7 @@ export default function KIAutomatisierungenPage() {
              <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">
                 Die Realität
              </span>
-             <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl leading-[0.9]">
+             <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl leading-[0.9]">
                 WARUM DU NICHT <span className="text-red-500">SKALIERST.</span>
              </h2>
           </div>
@@ -611,7 +611,7 @@ export default function KIAutomatisierungenPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Der Unterschied</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-950 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
               MANUELL VS. KI
             </h2>
           </div>
@@ -625,7 +625,7 @@ export default function KIAutomatisierungenPage() {
              >
                 <div className="mb-8 pb-8 border-b border-neutral-200">
                    <div className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2">Alte Methode</div>
-                   <h3 className="font-display font-black text-3xl md:text-4xl text-neutral-400">Manuelle Prozesse</h3>
+                   <h3 className="font-display font-bold text-3xl md:text-4xl text-neutral-400">Manuelle Prozesse</h3>
                 </div>
                 <ul className="space-y-6 flex-grow">
                    {[
@@ -654,7 +654,7 @@ export default function KIAutomatisierungenPage() {
 
                 <div className="mb-8 pb-8 border-b border-neutral-800 relative z-10">
                    <div className="text-sm font-bold uppercase tracking-widest text-brand mb-2">Die Zukunft</div>
-                   <h3 className="font-display font-black text-3xl md:text-4xl text-white">KI-Automatisierung</h3>
+                   <h3 className="font-display font-bold text-3xl md:text-4xl text-white">KI-Automatisierung</h3>
                 </div>
                 <ul className="space-y-6 flex-grow relative z-10">
                    {[
@@ -683,7 +683,7 @@ export default function KIAutomatisierungenPage() {
                    <div className="flex items-center justify-center md:justify-start gap-2 text-brand font-bold uppercase tracking-widest text-xs mb-4">
                       <BarChart3 size={16} /> Messbares Ergebnis
                    </div>
-                   <h3 className="font-display font-black text-2xl sm:text-4xl md:text-5xl text-white leading-none mb-4">
+                   <h3 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl text-white leading-none mb-4">
                       80% <br/><span className="text-neutral-400 text-2xl md:text-3xl font-sans font-normal">Zeitersparnis</span>
                    </h3>
                    <p className="text-neutral-400">Durchschnittliche Zeit-Reduktion nach KI-Implementierung.</p>
@@ -738,7 +738,7 @@ export default function KIAutomatisierungenPage() {
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">
                Live Demo
             </span>
-            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl mb-6 leading-tight">
+            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl mb-6 leading-tight">
                KI IN ACTION
             </h2>
             <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
@@ -898,7 +898,7 @@ export default function KIAutomatisierungenPage() {
       <section className="py-32 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-24">
-            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl mb-6">WÄHLE DEINE KI-LÖSUNG</h2>
+            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl mb-6">WÄHLE DEINE KI-LÖSUNG</h2>
             <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
                Jede Lösung zahlt sich innerhalb von 3 Monaten aus. Danach: Reiner Gewinn.
             </p>
@@ -1017,7 +1017,7 @@ export default function KIAutomatisierungenPage() {
         <div className="container mx-auto max-w-7xl">
            <div className="mb-20 text-center">
               <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">Echte Ergebnisse</span>
-              <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl text-white uppercase leading-[0.9]">
+              <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl text-white uppercase leading-[0.9]">
                  KI-Erfolge,<br/>die zählen.
               </h2>
            </div>
@@ -1125,15 +1125,15 @@ export default function KIAutomatisierungenPage() {
                     {/* KI Metrics Visualization */}
                     <div className="flex gap-12 text-center">
                         <div>
-                           <div className="text-6xl font-display font-black text-brand mb-2">24/7</div>
+                           <div className="text-6xl font-display font-bold text-brand mb-2">24/7</div>
                            <div className="text-neutral-500 text-xs uppercase tracking-widest">Verfügbar</div>
                         </div>
                         <div>
-                           <div className="text-6xl font-display font-black text-brand mb-2">0.3s</div>
+                           <div className="text-6xl font-display font-bold text-brand mb-2">0.3s</div>
                            <div className="text-neutral-500 text-xs uppercase tracking-widest">Antwortzeit</div>
                         </div>
                         <div>
-                           <div className="text-6xl font-display font-black text-brand mb-2">∞</div>
+                           <div className="text-6xl font-display font-bold text-brand mb-2">∞</div>
                            <div className="text-neutral-500 text-xs uppercase tracking-widest">Kapazität</div>
                         </div>
                     </div>
@@ -1154,7 +1154,7 @@ export default function KIAutomatisierungenPage() {
        {/* 7. FAQ */}
        <section className="py-24 px-6 bg-white border-t border-neutral-200">
           <div className="container mx-auto max-w-4xl">
-             <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
+             <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
              <div className="space-y-0 border-t border-neutral-200">
                 <FaqItem q="Wie lange dauert die Implementierung?" a="KI-Chatbot: 1-2 Wochen. Workflow Automatisierung: 2-3 Wochen. KI-Sekretärin: 3-4 Wochen. Alles wird auf dein Business angepasst und trainiert." />
                 <FaqItem q="Ersetzt die KI mein Team?" a="Nein. Die KI erledigt repetitive Aufgaben, die dein Team hassen. Dein Team fokussiert sich auf das, was nur Menschen können: Kreativität, Strategie, Beziehungen." />

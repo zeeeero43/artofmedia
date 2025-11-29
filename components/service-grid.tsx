@@ -121,7 +121,7 @@ export const ServiceGrid: React.FC<ServiceGridProps> = ({ onContactClick }) => {
         >
           {/* Title & Subtitle */}
           <div className="text-center mb-12">
-            <h3 className="font-display font-black text-4xl md:text-5xl mb-4 text-neutral-950">
+            <h3 className="font-display font-bold text-4xl md:text-5xl mb-4 text-neutral-700">
               {currentData.title}
             </h3>
             <p className="text-xl text-neutral-600 font-medium">{currentData.subtitle}</p>

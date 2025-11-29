@@ -30,7 +30,7 @@ export const NeonFlickerVisualizer = () => {
       >
         {/* Text with Glow */}
         <motion.h3
-          className="font-display font-black text-5xl md:text-6xl text-brand relative z-10"
+          className="font-display font-bold text-5xl md:text-6xl text-brand relative z-10"
           style={{
             textShadow: '0 0 20px rgba(0, 255, 41, 0.8), 0 0 40px rgba(0, 255, 41, 0.5)',
           }}

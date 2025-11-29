@@ -72,7 +72,7 @@ export const AttentionComparisonVisualizer = () => {
 
         {/* Arrow Indicator */}
         <motion.div
-          className="text-brand text-2xl font-black"
+          className="text-brand text-2xl font-bold"
           animate={{ x: [0, 10, 0], opacity: [0.5, 1, 0.5] }}
           transition={{ duration: 2, repeat: Infinity }}
         >

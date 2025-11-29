@@ -91,7 +91,7 @@ export const VideoWallContentVisualizer: React.FC = () => {
             <motion.h2
               initial={{ y: 20 }}
               animate={{ y: 0 }}
-              className="font-display font-black text-4xl md:text-5xl mb-2 tracking-tight"
+              className="font-display font-bold text-4xl md:text-5xl mb-2 tracking-tight"
               style={{
                 textShadow: `0 0 20px ${currentContent.color}, 0 0 40px ${currentContent.color}`
               }}

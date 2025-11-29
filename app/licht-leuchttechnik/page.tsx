@@ -124,7 +124,7 @@ export default function LichtLeuchttechnikPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-950"
+            className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-700"
           >
             DEINE <span className="text-brand">WERBUNG</span><br />
             IST NACHTS <span className="text-brand">UNSICHTBAR</span>?
@@ -171,7 +171,7 @@ export default function LichtLeuchttechnikPage() {
              <span className="text-brand font-mono text-xs uppercase tracking-widest mb-6 block">
                 Die Realität
              </span>
-             <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl leading-[0.9]">
+             <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl leading-[0.9]">
                 WARUM DU IM DUNKELN <span className="text-red-500">GELD VERLIERST.</span>
              </h2>
           </div>
@@ -260,7 +260,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Die Lösung</span>
-            <h2 className="font-display font-black text-2xl sm:text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-950 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
               LED-TECHNOLOGIE:<br/>DIE ZUKUNFT.
             </h2>
           </div>
@@ -274,7 +274,7 @@ export default function LichtLeuchttechnikPage() {
              >
                 <div className="mb-8 pb-8 border-b border-neutral-200">
                    <div className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2">Standard Beleuchtung</div>
-                   <h3 className="font-display font-black text-3xl md:text-4xl text-neutral-400">Alte Technik</h3>
+                   <h3 className="font-display font-bold text-3xl md:text-4xl text-neutral-400">Alte Technik</h3>
                 </div>
                 <ul className="space-y-6 flex-grow">
                    {[
@@ -302,7 +302,7 @@ export default function LichtLeuchttechnikPage() {
 
                 <div className="mb-8 pb-8 border-b border-neutral-800 relative z-10">
                    <div className="text-sm font-bold uppercase tracking-widest text-brand mb-2">LED Premium</div>
-                   <h3 className="font-display font-black text-3xl md:text-4xl text-white">art.of.media</h3>
+                   <h3 className="font-display font-bold text-3xl md:text-4xl text-white">art.of.media</h3>
                 </div>
                 <ul className="space-y-6 flex-grow relative z-10">
                    {[
@@ -327,7 +327,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Tag & Nacht</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl mb-4">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl mb-4">
               DEINE MARKE LEUCHTET 24/7
             </h2>
             <p className="text-xl text-neutral-600">LED-Technologie, die niemals schläft.</p>
@@ -342,7 +342,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Wetterfest</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl mb-4">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl mb-4">
               FUNKTIONIERT BEI<br/>JEDEM WETTER
             </h2>
             <p className="text-xl text-neutral-600">IP65 zertifiziert: Regen, Schnee, Hitze - alles kein Problem.</p>
@@ -357,7 +357,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Dynamische Inhalte</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl mb-4">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl mb-4">
               VIDEOWÄNDE<br/>FÜR MAXIMALE AUFMERKSAMKEIT
             </h2>
             <p className="text-xl text-neutral-600">Perfekt für Messen, Events, Sport & Hotels.</p>
@@ -372,7 +372,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Smart Features</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl mb-4">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl mb-4">
               FARBEN ÄNDERN<br/>PER APP
             </h2>
             <p className="text-xl text-neutral-600">RGB-Steuerung: Passe Farben an Events, Jahreszeiten oder Stimmung an.</p>
@@ -387,7 +387,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Authentischer Look</span>
-            <h2 className="font-display font-black text-2xl sm:text-4xl md:text-6xl mb-4">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl mb-4">
               ECHTER NEON-EFFEKT<br/>OHNE NACHTEILE
             </h2>
             <p className="text-xl text-neutral-600">LED-Technologie mit authentischem Flicker-Effekt.</p>
@@ -402,7 +402,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Flexible Optionen</span>
-            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-7xl text-neutral-950 uppercase leading-[0.9]">
+            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl text-neutral-700 uppercase leading-[0.9]">
               KAUF ODER MIETE?<br/>DU ENTSCHEIDEST.
             </h2>
           </div>
@@ -414,7 +414,7 @@ export default function LichtLeuchttechnikPage() {
               className="bg-white border-2 border-neutral-200 p-10 rounded-lg"
             >
               <div className="text-xs font-bold uppercase tracking-widest text-brand mb-2">Fokus: Langfristig</div>
-              <h3 className="font-display font-black text-3xl mb-6">Einmal zahlen.<br/>Für immer behalten.</h3>
+              <h3 className="font-display font-bold text-3xl mb-6">Einmal zahlen.<br/>Für immer behalten.</h3>
 
               <ul className="space-y-4 mb-8">
                 {[
@@ -447,7 +447,7 @@ export default function LichtLeuchttechnikPage() {
 
               <div className="relative z-10">
                 <div className="text-xs font-bold uppercase tracking-widest text-brand mb-2">Fokus: Flexibilität</div>
-                <h3 className="font-display font-black text-3xl mb-6">Null Anschaffungskosten.<br/>Volle Power.</h3>
+                <h3 className="font-display font-bold text-3xl mb-6">Null Anschaffungskosten.<br/>Volle Power.</h3>
 
                 <ul className="space-y-4 mb-8">
                   {[
@@ -478,7 +478,7 @@ export default function LichtLeuchttechnikPage() {
       {/* 13. FAQ */}
       <section className="py-24 px-6 bg-white border-t border-neutral-200">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
+          <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl mb-12 text-center uppercase">Häufige Fragen</h2>
           <div className="space-y-0 border-t border-neutral-200">
             <FaqItem
               q="Was kostet Leuchtschrift?"

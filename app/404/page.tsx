@@ -114,7 +114,7 @@ const NotFoundPage = () => {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="relative mb-8"
           >
-            <h1 className="font-display font-black text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[12rem] leading-[0.8] tracking-tighter">
+            <h1 className="font-display font-bold text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[12rem] leading-[0.8] tracking-tighter">
               <span className="relative inline-block">
                 <span className="text-brand drop-shadow-[0_0_40px_rgba(0,255,41,0.6)]">
                   {glitchText}

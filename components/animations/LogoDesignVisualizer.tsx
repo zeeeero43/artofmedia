@@ -6,7 +6,7 @@ export const LogoDesignVisualizer: React.FC = () => {
     { text: 'art.of.media', font: 'font-sans', color: '#737373', size: 'text-2xl md:text-3xl', tracking: 'tracking-normal', weight: 'font-normal' },
     { text: 'art.of.media', font: 'font-serif', color: '#A3A3A3', size: 'text-2xl md:text-3xl', tracking: 'tracking-wide', weight: 'font-medium' },
     { text: 'ART.OF.MEDIA', font: 'font-mono', color: '#D4D4D4', size: 'text-xl md:text-2xl', tracking: 'tracking-widest', weight: 'font-bold' },
-    { text: 'art.of.media', font: 'font-display', color: '#00FF29', size: 'text-3xl md:text-4xl', tracking: 'tracking-tight', weight: 'font-black' },
+    { text: 'art.of.media', font: 'font-display', color: '#00FF29', size: 'text-3xl md:text-4xl', tracking: 'tracking-tight', weight: 'font-bold' },
   ];
 
   const [currentStage, setCurrentStage] = useState(0);

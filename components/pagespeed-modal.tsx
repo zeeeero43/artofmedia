@@ -282,7 +282,7 @@ export const PageSpeedModal: React.FC<PageSpeedModalProps> = ({ isOpen, onClose,
                   <div className="inline-flex items-center gap-2 mb-4 text-brand">
                     <Zap size={24} />
                   </div>
-                  <h2 className="font-display font-black text-2xl md:text-3xl mb-4 leading-tight">
+                  <h2 className="font-display font-bold text-2xl md:text-3xl mb-4 leading-tight">
                     Kostenloser<br />Website-Check
                   </h2>
                   <p className="text-neutral-400 leading-relaxed">

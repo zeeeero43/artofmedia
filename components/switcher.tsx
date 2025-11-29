@@ -33,7 +33,7 @@ export const Switcher: React.FC<SwitcherProps> = ({ activeMode, onChange }) => {
           className="flex-1 relative z-10 py-3 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 group/btn"
         >
           <div className={cn("w-2 h-2 rounded-full transition-all duration-300", activeMode === 'digital' ? "bg-brand shadow-[0_0_10px_#00FF29]" : "bg-neutral-300 group-hover/btn:bg-neutral-400")} />
-          <span className={cn("font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tight transition-colors duration-300", activeMode === 'digital' ? "text-neutral-950" : "text-neutral-500")}>
+          <span className={cn("font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tight transition-colors duration-300", activeMode === 'digital' ? "text-neutral-700" : "text-neutral-500")}>
             Digital
           </span>
         </button>
@@ -46,7 +46,7 @@ export const Switcher: React.FC<SwitcherProps> = ({ activeMode, onChange }) => {
           onClick={() => onChange('physical')}
           className="flex-1 relative z-10 py-3 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 group/btn"
         >
-          <span className={cn("font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tight transition-colors duration-300", activeMode === 'physical' ? "text-neutral-950" : "text-neutral-500")}>
+          <span className={cn("font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tight transition-colors duration-300", activeMode === 'physical' ? "text-neutral-700" : "text-neutral-500")}>
             Physisch
           </span>
           <div className={cn("w-2 h-2 rounded-full transition-all duration-300", activeMode === 'physical' ? "bg-brand shadow-[0_0_10px_#00FF29]" : "bg-neutral-300 group-hover/btn:bg-neutral-400")} />
