@@ -489,7 +489,7 @@ export default function KIAutomatisierungenPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-700"
+            className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-900"
           >
             <span className="text-brand">KI</span> ARBEITET.<br />
             DU NICHT.
@@ -611,7 +611,7 @@ export default function KIAutomatisierungenPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Der Unterschied</span>
-            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-900 uppercase">
               MANUELL VS. KI
             </h2>
           </div>

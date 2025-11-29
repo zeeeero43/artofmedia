@@ -77,7 +77,7 @@ export const LEDBrightnessVisualizer = () => {
         </motion.div>
 
         {/* Label */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 text-xs font-bold text-neutral-700 bg-white/80 px-3 py-1 rounded-full">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 text-xs font-bold text-neutral-900 bg-white/80 px-3 py-1 rounded-full">
           Tag
         </div>
 

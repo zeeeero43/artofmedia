@@ -71,7 +71,7 @@ export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ activeMode
            <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">
              Transformation
            </span>
-           <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl uppercase text-neutral-700 leading-[0.9]">
+           <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl uppercase text-neutral-900 leading-[0.9]">
              Der Unterschied
            </h2>
         </div>

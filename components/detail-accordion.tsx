@@ -162,8 +162,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
                   {item.subtitle}
                 </span>
                 <h3 className={cn(
-                  "font-display font-bold text-2xl md:text-3xl text-neutral-700 leading-tight transition-all duration-300",
-                  isExpanded && "text-neutral-700"
+                  "font-display font-bold text-2xl md:text-3xl text-neutral-900 leading-tight transition-all duration-300",
+                  isExpanded && "text-neutral-900"
                 )}>
                   {item.title}
                 </h3>
@@ -247,7 +247,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
                   className="flex flex-col justify-center space-y-6"
                 >
                   <div>
-                    <h4 className="font-display font-bold text-2xl md:text-3xl text-neutral-700 mb-4 leading-tight">
+                    <h4 className="font-display font-bold text-2xl md:text-3xl text-neutral-900 mb-4 leading-tight">
                       {item.modal.headline}
                     </h4>
                     <p className="text-neutral-600 text-base md:text-lg leading-relaxed">
@@ -341,7 +341,7 @@ export const DeepDiveGrid: React.FC<DeepDiveGridProps> = ({ onContactClick }) =>
           <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">
             Dein Vorteil
           </span>
-          <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl uppercase text-neutral-700 leading-[0.9]">
+          <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-5xl uppercase text-neutral-900 leading-[0.9]">
             Warum wir?
           </h2>
           <motion.p

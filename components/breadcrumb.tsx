@@ -36,7 +36,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                 {item.name}
               </Link>
             ) : (
-              <span className="text-neutral-700 font-medium">{item.name}</span>
+              <span className="text-neutral-900 font-medium">{item.name}</span>
             )}
           </li>
         ))}

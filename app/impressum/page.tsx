@@ -37,7 +37,7 @@ export default function ImpressumPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl leading-[0.9] mb-6 sm:mb-8 tracking-tighter text-neutral-700">
+            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl leading-[0.9] mb-6 sm:mb-8 tracking-tighter text-neutral-900">
               IMPRESSUM
             </h1>
             <p className="text-xl text-neutral-500 max-w-2xl leading-relaxed">
@@ -62,7 +62,7 @@ export default function ImpressumPage() {
               <h2 className="font-display font-bold text-2xl md:text-3xl mb-6 text-neutral-950">
                 Angaben zum Anbieter
               </h2>
-              <div className="space-y-4 text-lg text-neutral-700">
+              <div className="space-y-4 text-lg text-neutral-900">
                 <p className="font-bold text-neutral-950 text-xl">art.of.media marketing</p>
                 <p>Ugurkan Metan</p>
                 <div className="flex items-start gap-3 mt-4">
@@ -88,7 +88,7 @@ export default function ImpressumPage() {
               <h2 className="font-display font-bold text-2xl md:text-3xl mb-6 text-neutral-950">
                 Kontakt
               </h2>
-              <div className="space-y-4 text-lg text-neutral-700">
+              <div className="space-y-4 text-lg text-neutral-900">
                 <div className="flex items-center gap-3">
                   <Phone className="text-brand shrink-0" size={20} />
                   <a href="tel:+491758000447" className="hover:text-brand transition-colors">
@@ -116,7 +116,7 @@ export default function ImpressumPage() {
               <h2 className="font-display font-bold text-2xl md:text-3xl mb-6 text-neutral-950">
                 Umsatzsteuer-ID
               </h2>
-              <div className="space-y-2 text-lg text-neutral-700">
+              <div className="space-y-2 text-lg text-neutral-900">
                 <p>
                   Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
                 </p>
@@ -136,7 +136,7 @@ export default function ImpressumPage() {
               <h2 className="font-display font-bold text-2xl md:text-3xl mb-6 text-neutral-950">
                 EU-Streitschlichtung
               </h2>
-              <div className="space-y-4 text-lg text-neutral-700">
+              <div className="space-y-4 text-lg text-neutral-900">
                 <p>
                   Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
                 </p>
@@ -167,7 +167,7 @@ export default function ImpressumPage() {
               <h2 className="font-display font-bold text-2xl md:text-3xl mb-6 text-neutral-950">
                 Verbraucherstreitbeilegung / Universalschlichtungsstelle
               </h2>
-              <div className="space-y-4 text-lg text-neutral-700">
+              <div className="space-y-4 text-lg text-neutral-900">
                 <p>
                   Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
                   Verbraucherschlichtungsstelle teilzunehmen.

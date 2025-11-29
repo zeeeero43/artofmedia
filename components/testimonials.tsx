@@ -65,7 +65,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ onSelectReview }) =>
                 <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">
                     Success Stories
                 </span>
-                <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl uppercase text-neutral-700 leading-[0.9]">
+                <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl uppercase text-neutral-900 leading-[0.9]">
                     Kunden lieben<br/>Ergebnisse
                 </h2>
             </div>

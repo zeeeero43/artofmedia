@@ -41,7 +41,7 @@ export const InvisibleShopVisualizer: React.FC = () => {
       </div>
 
       {/* Background text */}
-      <div className="absolute bottom-4 right-4 text-neutral-700 text-xs font-mono">
+      <div className="absolute bottom-4 right-4 text-neutral-900 text-xs font-mono">
         Kein Schild = Unsichtbar
       </div>
     </div>

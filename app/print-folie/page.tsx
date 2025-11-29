@@ -154,7 +154,7 @@ export default function PrintFoliePage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-700"
+            className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-900"
           >
             DEINE <span className="text-brand">WERBUNG</span><br />
             IST UNSICHTBAR?
@@ -298,7 +298,7 @@ export default function PrintFoliePage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Qualitätsunterschied</span>
-            <h2 className="font-display font-bold text-2xl sm:text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-900 uppercase">
               DER UNTERSCHIED?<br/>QUALITÄT.
             </h2>
           </div>
@@ -383,7 +383,7 @@ export default function PrintFoliePage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Unser Angebot</span>
-            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl text-neutral-700 uppercase leading-[0.9]">
+            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl text-neutral-900 uppercase leading-[0.9]">
               DEINE WERBUNG,<br/>DEINE WAHL.
             </h2>
             <p className="text-xl text-neutral-500 mt-6 max-w-2xl mx-auto">

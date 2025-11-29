@@ -121,7 +121,7 @@ export const ServiceGrid: React.FC<ServiceGridProps> = ({ onContactClick }) => {
         >
           {/* Title & Subtitle */}
           <div className="text-center mb-12">
-            <h3 className="font-display font-bold text-4xl md:text-5xl mb-4 text-neutral-700">
+            <h3 className="font-display font-bold text-4xl md:text-5xl mb-4 text-neutral-900">
               {currentData.title}
             </h3>
             <p className="text-xl text-neutral-600 font-medium">{currentData.subtitle}</p>
@@ -145,7 +145,7 @@ export const ServiceGrid: React.FC<ServiceGridProps> = ({ onContactClick }) => {
                 >
                   {service.icon}
                 </motion.div>
-                <span className="text-sm font-bold text-neutral-700 text-center group-hover:text-neutral-950 transition-colors">
+                <span className="text-sm font-bold text-neutral-900 text-center group-hover:text-neutral-950 transition-colors">
                   {service.name}
                 </span>
 

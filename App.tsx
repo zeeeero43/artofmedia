@@ -134,7 +134,7 @@ function App() {
           {/* 3. Intro Statement (Editorial Style) */}
           <section className="relative z-10 py-24 md:py-32 px-6 bg-white border-b border-neutral-200">
              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="font-display font-bold text-xl sm:text-4xl md:text-6xl leading-tight mb-6 sm:mb-8 text-neutral-700">
+                <h2 className="font-display font-bold text-xl sm:text-4xl md:text-6xl leading-tight mb-6 sm:mb-8 text-neutral-900">
                   "Unsichtbar sein<br/>kostet Geld."
                 </h2>
                 <div className="w-[1px] h-16 bg-brand mx-auto mb-8" />
@@ -149,7 +149,7 @@ function App() {
           <section className="relative z-10 py-16 px-6 bg-neutral-50 border-b border-neutral-200">
              <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-8">
-                   <h3 className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-neutral-700 mb-4">
+                   <h3 className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-neutral-900 mb-4">
                       Unsere Leistungen
                    </h3>
                    <p className="text-neutral-600 text-base md:text-lg">
@@ -203,7 +203,7 @@ function App() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                    <div>
                       <span className="font-mono text-xs uppercase tracking-widest text-brand mb-4 block">Ihr Partner im Ruhrgebiet</span>
-                      <h2 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl leading-tight mb-6 text-neutral-700">
+                      <h2 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl leading-tight mb-6 text-neutral-900">
                         Marketing Agentur aus Duisburg
                       </h2>
                       <p className="text-neutral-600 leading-relaxed mb-4">

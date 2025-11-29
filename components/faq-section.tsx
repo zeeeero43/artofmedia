@@ -41,7 +41,7 @@ export const FAQSection: React.FC = () => {
            <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">
              Support
            </span>
-           <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl uppercase text-neutral-700 tracking-tighter leading-[0.9]">
+           <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl uppercase text-neutral-900 tracking-tighter leading-[0.9]">
              Häufige Fragen
            </h2>
         </div>
@@ -53,10 +53,10 @@ export const FAQSection: React.FC = () => {
                 onClick={() => setActiveIndex(activeIndex === idx ? null : idx)}
                 className="w-full py-8 flex justify-between items-start text-left group"
               >
-                <span className="font-display font-bold text-xl md:text-2xl text-neutral-700 group-hover:text-brand transition-colors pr-8">
+                <span className="font-display font-bold text-xl md:text-2xl text-neutral-900 group-hover:text-brand transition-colors pr-8">
                   {item.q}
                 </span>
-                <span className="mt-1 text-neutral-700 group-hover:text-brand transition-colors">
+                <span className="mt-1 text-neutral-900 group-hover:text-brand transition-colors">
                     {activeIndex === idx ? <Minus size={24} /> : <Plus size={24} />}
                 </span>
               </button>

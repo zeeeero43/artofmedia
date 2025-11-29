@@ -183,7 +183,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, sel
 
              {/* Right Side: Form (Light) */}
              <div className="w-full md:w-3/5 p-8 md:p-12 bg-white">
-                <h3 className="font-display font-bold text-2xl mb-8 text-neutral-700">Nachricht senden</h3>
+                <h3 className="font-display font-bold text-2xl mb-8 text-neutral-900">Nachricht senden</h3>
 
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

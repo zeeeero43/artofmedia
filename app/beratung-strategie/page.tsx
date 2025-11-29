@@ -404,7 +404,7 @@ export default function BeratungStrategie() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-700"
+            className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 tracking-tighter text-neutral-900"
           >
             WO ANFANGEN<br />
             MIT <span className="text-brand">MARKETING</span>?
@@ -526,7 +526,7 @@ export default function BeratungStrategie() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Die Lösung</span>
-            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-900 uppercase">
               WIR HELFEN DIR, KLARHEIT ZU SCHAFFEN
             </h2>
           </div>
@@ -593,7 +593,7 @@ export default function BeratungStrategie() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">So arbeiten wir</span>
-            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-900 uppercase">
               GEMEINSAM ZUM KONZEPT
             </h2>
           </div>
@@ -618,7 +618,7 @@ export default function BeratungStrategie() {
                   ].map((item, i) => (
                     <li key={i} className="flex gap-4 items-start">
                       <span className="font-mono font-bold text-brand text-sm">{item.step}</span>
-                      <span className="text-neutral-700">{item.text}</span>
+                      <span className="text-neutral-900">{item.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -711,7 +711,7 @@ export default function BeratungStrategie() {
                   {offer.features.map((feature, idx) => (
                     <li key={idx} className="flex gap-2 items-start text-sm">
                       <Check size={16} className={offer.featured ? 'text-brand' : 'text-neutral-950'} />
-                      <span className={offer.featured ? 'text-neutral-300' : 'text-neutral-700'}>{feature}</span>
+                      <span className={offer.featured ? 'text-neutral-300' : 'text-neutral-900'}>{feature}</span>
                     </li>
                   ))}
                 </ul>

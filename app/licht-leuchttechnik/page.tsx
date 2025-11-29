@@ -124,7 +124,7 @@ export default function LichtLeuchttechnikPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-700"
+            className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 tracking-tighter text-neutral-900"
           >
             DEINE <span className="text-brand">WERBUNG</span><br />
             IST NACHTS <span className="text-brand">UNSICHTBAR</span>?
@@ -260,7 +260,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Die Lösung</span>
-            <h2 className="font-display font-bold text-2xl sm:text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-900 uppercase">
               LED-TECHNOLOGIE:<br/>DIE ZUKUNFT.
             </h2>
           </div>
@@ -402,7 +402,7 @@ export default function LichtLeuchttechnikPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Flexible Optionen</span>
-            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl text-neutral-700 uppercase leading-[0.9]">
+            <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl text-neutral-900 uppercase leading-[0.9]">
               KAUF ODER MIETE?<br/>DU ENTSCHEIDEST.
             </h2>
           </div>

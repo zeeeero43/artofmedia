@@ -214,7 +214,7 @@ const SERPCompetition = () => {
                 <span className="bg-neutral-700 text-neutral-500 text-[10px] font-bold px-2 py-0.5 rounded">Anzeige</span>
              </div>
              <div className="text-neutral-600 text-sm font-bold mb-1">Deine Anzeige - Position #8</div>
-             <div className="text-neutral-700 text-xs">Generische Keywords • Langsame Seite</div>
+             <div className="text-neutral-900 text-xs">Generische Keywords • Langsame Seite</div>
           </div>
        </div>
 
@@ -549,7 +549,7 @@ export default function GoogleMarketingPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.9] mb-8 tracking-tighter text-neutral-700"
+            className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.9] mb-8 tracking-tighter text-neutral-900"
           >
             DEINE <span className="text-brand">GOOGLE ADS</span> KOSTEN<br />
             GELD, ABER KEINE<br/>
@@ -674,7 +674,7 @@ export default function GoogleMarketingPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Google Ads Vergleich</span>
-            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-900 uppercase">
               WAS IST DER UNTERSCHIED?
             </h2>
           </div>
@@ -761,7 +761,7 @@ export default function GoogleMarketingPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
             <span className="text-brand font-mono text-xs uppercase tracking-widest mb-4 block">Ganzheitliche Google-Strategie</span>
-            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-700 uppercase mb-6">
+            <h2 className="font-display font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] text-neutral-900 uppercase mb-6">
               Google Marketing<br/>Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
@@ -805,7 +805,7 @@ export default function GoogleMarketingPage() {
                     "Detaillierte Reportings",
                     "Maximaler ROI & minimierte Kosten"
                   ].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-neutral-700">
+                    <li key={i} className="flex items-center gap-3 text-sm text-neutral-900">
                       <Check className="text-brand shrink-0" size={16} strokeWidth={3} />
                       <span>{feature}</span>
                     </li>
@@ -852,7 +852,7 @@ export default function GoogleMarketingPage() {
                     "Umfassende Keyword-Recherchen",
                     "Langfristige Ranking-Verbesserung"
                   ].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-neutral-700">
+                    <li key={i} className="flex items-center gap-3 text-sm text-neutral-900">
                       <Check className="text-brand shrink-0" size={16} strokeWidth={3} />
                       <span>{feature}</span>
                     </li>
@@ -899,7 +899,7 @@ export default function GoogleMarketingPage() {
                     "NAP-Konsistenz (Name, Adresse, Telefon)",
                     "Lokale Backlinks & Citations"
                   ].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-neutral-700">
+                    <li key={i} className="flex items-center gap-3 text-sm text-neutral-900">
                       <Check className="text-brand shrink-0" size={16} strokeWidth={3} />
                       <span>{feature}</span>
                     </li>
