@@ -4,7 +4,7 @@
 @theme {
   /* Fonts */
   --font-sans: 'Inter', sans-serif;
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Inter', sans-serif;
 
   /* Brand Colors */
   --color-brand: #00FF29;
@@ -113,8 +113,8 @@ body {
 
 #cc-main .cm__title,
 #cc-main .pm__title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
